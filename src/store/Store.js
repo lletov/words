@@ -5,17 +5,21 @@ const useCountStore = create((set) => ({
   object: {},
   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
   setCount: (num) => set({ count: num }),
-  setObjectField: (id, text) =>
+  setObjectGroup: (id, value) =>
     set((state) => ({
-      object: {
-        ...state.object,
-        [id]: text 
+      objectD: {
+        ...state.objectD,
+        [id]: value
       },
     })),
-    updateObjectField: (id, text) =>
-      set((state) => ({
-        object: {...state.object, id: text}
-      })),
 }))
+
+// const useCountStore = create((set) => ({
+//   bears: 0,
+//   mikky: {g: 6, d: 4},
+//   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
+//   removeAllBears: () => set({ bears: 0 }),
+//   updateBears: (newBears) => set({ bears: newBears }),
+// }))
 
 export default useCountStore
