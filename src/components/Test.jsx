@@ -5,17 +5,16 @@ import { NotFound } from './NotFound';
 
 export const Test = () => {
 
-  const bears = useTestStore((state) => state.bears)
   const wordsAmount = Number(useParams().wordsAmount);
-  
-  if (wordsAmount === bears) {
+  const testVariantsNumbers = useTestStore((state) => state.testVariants)
+
+  if (testVariantsNumbers.find((el) => el === wordsAmount)) {
     return (
-      <div>Test</div>
+      <div>Test {wordsAmount}</div>
     )
   } else {
     return (
       <NotFound/>
     )
   }
-  
 }
