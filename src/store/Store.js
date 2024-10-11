@@ -1,9 +1,11 @@
 import { create } from 'zustand'
 
-const useCountStore = create((set) => ({
-  count: 22,
+const useTestStore = create((set) => ({
+  bears: 0,
+  mikky: {},
   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-  setCount: (num) => set({ count: num }),
+  removeAllBears: () => set({ bears: 0 }),
+  updateBears: (newBears) => set({ bears: newBears }),
 }))
 
-export default useCountStore
+export default useTestStore
