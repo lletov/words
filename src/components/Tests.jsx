@@ -1,17 +1,16 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
-import { Test100 } from './Test100'
 import { Link } from 'react-router-dom';
+import useTestStore from './../store/Store';
+
 
 export const Tests = () => {
+
+  const bears = useTestStore((state) => state.bears)
+
   return (
     <div>
-    <Link to='/tests/test100'>Test 100</Link>
-    {/* <HashRouter>
-      <Routes>
-        <Route path="/test100" element={<Test100 />} />
-      </Routes>
-    </HashRouter> */}
+    <Link to={`/tests/${bears}`}>Test 100</Link>
+    
     </div>
   )
 }
