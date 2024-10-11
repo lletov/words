@@ -1,25 +1,11 @@
 import { create } from 'zustand'
 
-const useCountStore = create((set) => ({
-  count: 22,
-  object: {},
+const useTestStore = create((set) => ({
+  bears: 0,
+  mikky: {},
   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-  setCount: (num) => set({ count: num }),
-  setObjectGroup: (id, value) =>
-    set((state) => ({
-      objectD: {
-        ...state.objectD,
-        [id]: value
-      },
-    })),
+  removeAllBears: () => set({ bears: 0 }),
+  updateBears: (newBears) => set({ bears: newBears }),
 }))
 
-// const useCountStore = create((set) => ({
-//   bears: 0,
-//   mikky: {g: 6, d: 4},
-//   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-//   removeAllBears: () => set({ bears: 0 }),
-//   updateBears: (newBears) => set({ bears: newBears }),
-// }))
-
-export default useCountStore
+export default useTestStore
