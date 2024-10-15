@@ -20,10 +20,9 @@ const useTestStore = create((set) => ({
   testArray: null,
   questionNumber: 0,
   testWordsNumber: 0,
-  result: {
-    time: 0,
-    stat: [],
-  },
+  startTime: null,
+  endTime: null, 
+  result: [],
 
   // increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
   // removeAllBears: () => set({ bears: 0 }),
@@ -34,21 +33,10 @@ const useTestStore = create((set) => ({
   resetQuestionNumber: () => set({ questionNumber: 0 }),
   increaseQuestionNumber: () => set((state) => ({ questionNumber: state.questionNumber + 1 })),
   setTestWordsNumber: (n) => set({ testWordsNumber: n }),
-  // addStat: (el) => set({ stat: [state.result.stat, el] }),
-  addStat: (el) =>
-    set((state) => ({
-      result: {
-        ...state.time,
-        stat: [...state.result.stat, el]
-          }
-    })),
-    resetStat: (el) =>
-      set((state) => ({
-        result: {
-          time: 0,
-          stat: []
-            }
-      })),
+  setStartTime: () => set({ startTime: new Date()}),
+  setEndTime: () => set({ endTime: new Date()}),
+  addResult: (el) => set((state) => ({ result: [...state.result, el] })),
+  resetResult: (el) => set((state) => ({ result: [] })),
 }))
 
 export default useTestStore

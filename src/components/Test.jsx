@@ -3,6 +3,7 @@ import useTestStore from './../store/Store';
 import { useParams } from 'react-router-dom';
 import { NotFound } from './NotFound';
 import words from '../Words';
+import { useEffect } from 'react';
 
 export const Test = () => {
 
@@ -11,11 +12,17 @@ export const Test = () => {
   const possibleURLs = Object.keys(storeTests);
 
   const testArray = useTestStore((state) => state.testArray)
+  const startTime = useTestStore((state) => state.startTime)
+  const endTime = useTestStore((state) => state.endTime)
+  const setEndTime = useTestStore((state) => state.setEndTime);
 
   const questionNumber = useTestStore((state) => state.questionNumber);
   const testWordsNumber = useTestStore((state) => state.testWordsNumber);
   const increaseQuestionNumber = useTestStore((state) => state.increaseQuestionNumber);
-  const addStat = useTestStore((state) => state.addStat);
+  const addResult = useTestStore((state) => state.addResult);
+
+  
+  
   const result = useTestStore((state) => state.result);
 
   function checkAnswer(answer){
@@ -29,15 +36,18 @@ export const Test = () => {
     }
     const ans = {word: answer, status: status};
     increaseQuestionNumber();
-    addStat(ans)
+    addResult(ans)
 
+    if (questionNumber + 1 === testWordsNumber) {
+      setEndTime()
+    }
   }
   
   if (possibleURLs.find((el) => el === URLprefix) && testArray !== null) {
     if ((questionNumber + 1) <= testWordsNumber) {
 
-      const variants = testArray[questionNumber].variants.map(v => <button onClick={(e)=> {checkAnswer(v)}}>{words[v]}</button>)
-
+      const variants = testArray[questionNumber].variants.map((v) => <button onClick={(e)=> {checkAnswer(v)}}>{words[v]}</button>)
+      
       return (
         <div>
           <p>{questionNumber +1} / {testWordsNumber}</p>
@@ -46,11 +56,11 @@ export const Test = () => {
         </div>
       )
     } else {
-      console.log(Object.values(result.stat))
-      let trueAnswersCount = Object.values(result.stat).filter((el) => {return el.status === true}).length;
-
+      let trueAnswersCount = result.filter((el) => {return el.status === true}).length;
+      const testTime = (endTime.getTime() - startTime.getTime())/1000
+      console.log(startTime, endTime)
       return (
-        <div>{trueAnswersCount}</div>
+        <div onClick={(e) => {setEndTime()}}>{trueAnswersCount}, {testTime}</div>
       )
     }
   } else {
