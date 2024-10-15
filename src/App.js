@@ -10,9 +10,6 @@ import useTestStore from './store/Store';
 
 function App() {
 
-  const bears = useTestStore((state) => state.bears)
-  console.log(bears)
-
   return (
     <div className="App">
     <Header/>
