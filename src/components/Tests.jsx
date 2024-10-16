@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { TestCard } from './TestCard';
+import { StatusBar } from './StatusBar';
 import useTestStore from './../store/Store';
 import {generareRandomList, shuffle, generateTestObject} from '../utils/TestSetupUtils';
 import words from '../Words';
@@ -36,6 +37,7 @@ export const Tests = () => {
         to={`/tests/${storeTests[t].url}`}
         key={t}
         onClick={(e) =>{startTest(t)}}
+        style={{ textDecoration: 'none' }}
     >
             <TestCard
                 title={storeTests[t].title}
@@ -47,8 +49,15 @@ export const Tests = () => {
     )
 
   return (
-    <div>
-    {tests} 
-    </div>
+    <>
+      <StatusBar />
+      <div className='content'>
+        <h2>варианты теста</h2>
+        <div className='group'>
+          {tests} 
+        </div>
+      </div>
+    </>
+    
   )
 }

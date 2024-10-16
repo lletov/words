@@ -1,13 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --accent-color: #1C29A0;
+  --accent-hover: #334CDB;
+  --light-color: #F2F6F9;
+  --black: #222;
+  --white: #fff;
+  --gray: #c1c1c1;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font-family: "Inter", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: var(--light-color);
+
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--black);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.content {
+  padding: 24px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-m {
+  height: 72px;
+  width: 100%;
+  padding: 0px 24px;
+  border: solid 2px var(--accent-color);
+  border-radius: 32px;
+  color: var(--accent-color);
+  font-size: 24px;
+  font-weight: 600;
+  background-color: transparent;
+}
+.btn-m:hover {
+  cursor: pointer;
+}
+
+.accent{
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+.btn-s {
+  height: 32px;
+  border: solid 1px var(--accent-color);
+  border-radius: 32px;
+  color: var(--accent-color);
+  font-size: 16px;
+  font-weight: 300;
+}
+.btn-s:hover {
+  cursor: pointer;
+}
+
+.test-card{
+  background-color: var(--white);
+  border-radius: 32px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.test-card img{
+  height: 16px;
+}
+
+.test-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.test-card-tips{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+
+.test-card-tip {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+}
+.test-card-tip p {
+  color: var(--gray);
+}
+.test-card-tip img {
+  color: var(--gray);
+  filter: brightness(0) saturate(100%) invert(53%) sepia(99%) saturate(0%) hue-rotate(232deg) brightness(113%) contrast(109%);
 }
