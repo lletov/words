@@ -4,10 +4,12 @@ import { useParams } from 'react-router-dom';
 import { NotFound } from './NotFound';
 import words from '../Words';
 import { useEffect } from 'react';
+import clock from './../assets/clock.png'
+import done from './../assets/done.png'
 
 export const Test = () => {
 
-  const URLprefix = useParams().wordsAmount;
+  const URLprefix = useParams().testName;
   const storeTests = useTestStore((state) => state.tests)
   const possibleURLs = Object.keys(storeTests);
 
@@ -46,13 +48,16 @@ export const Test = () => {
   if (possibleURLs.find((el) => el === URLprefix) && testArray !== null) {
     if ((questionNumber + 1) <= testWordsNumber) {
 
-      const variants = testArray[questionNumber].variants.map((v) => <button onClick={(e)=> {checkAnswer(v)}}>{words[v]}</button>)
+      const variants = testArray[questionNumber].variants.map((v) => <button className='btn-m' onClick={(e)=> {checkAnswer(v)}}>{words[v]}</button>)
       
       return (
-        <div>
-          <p>{questionNumber +1} / {testWordsNumber}</p>
-          <p>{testArray[questionNumber].variants[testArray[questionNumber].correctIndex]}</p>
-          {variants}
+        <div className='content'>
+          <div className='test-status-bar'>
+            <button className='btn-s'>назад</button>
+            <p>{questionNumber +1} / {testWordsNumber}</p>
+          </div>
+          <h4>{testArray[questionNumber].variants[testArray[questionNumber].correctIndex]}</h4>
+          <div className='group'>{variants}</div>
         </div>
       )
     } else {
@@ -60,7 +65,25 @@ export const Test = () => {
       const testTime = (endTime.getTime() - startTime.getTime())/1000
       console.log(startTime, endTime)
       return (
-        <div onClick={(e) => {setEndTime()}}>{trueAnswersCount}, {testTime}</div>
+        <div className='content'>
+          <h2>резульататы теста "{URLprefix}"</h2>
+          <div className='res-numbers'>
+            <div className='res-item'>
+              <div className='res-tip'>
+                <img src={done}/>
+                <p>результат</p>
+              </div>
+              <h3>{trueAnswersCount} / {testArray.length}</h3>
+            </div>
+            <div className='res-item'>
+              <div className='res-tip'>
+                <img src={clock}/>
+                <p>время</p>
+              </div>
+              <h3>{testTime}</h3>
+            </div>
+          </div>
+        </div>
       )
     }
   } else {
