@@ -6,6 +6,9 @@ import words from '../Words';
 import { useEffect } from 'react';
 import clock from './../assets/clock.png'
 import done from './../assets/done.png'
+import stat from './../assets/stack.png'
+import arrow from './../assets/arrow-right.svg'
+import { Link } from 'react-router-dom';
 
 export const Test = () => {
 
@@ -67,21 +70,32 @@ export const Test = () => {
       return (
         <div className='content'>
           <h2>резульататы теста "{URLprefix}"</h2>
-          <div className='res-numbers'>
-            <div className='res-item'>
+          <div className='res-item'>
+            <div className='res-numbers-item'>
               <div className='res-tip'>
                 <img src={done}/>
                 <p>результат</p>
               </div>
               <h3>{trueAnswersCount} / {testArray.length}</h3>
             </div>
-            <div className='res-item'>
+            <div className='res-numbers-item'>
               <div className='res-tip'>
                 <img src={clock}/>
                 <p>время</p>
               </div>
               <h3>{testTime}</h3>
             </div>
+          </div>
+          <div className='res-item accordion-item'>
+            <div className='res-item-header'>
+              <img src={stat}/>
+              <h2>stat</h2>
+            </div>
+            <img className='accordion-arrow' src={arrow}/>
+          </div>
+          <div className='group'>
+            <button className='btn-m accent'>again</button>
+            <Link to='/'><button className='btn-m'>на главную страницу</button></Link>
           </div>
         </div>
       )
