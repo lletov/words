@@ -95,6 +95,14 @@ export const Test = () => {
       const testTime = (endTime.getTime() - startTime.getTime())/1000
       const minutes = Math.floor(testTime / 60);
       const seconds = Math.floor(testTime - minutes * 60);
+      let formatedMinutes;
+      let formatedSeconds;
+      minutes.toString().length < 2 
+        ? formatedMinutes = '0'+ minutes
+        : formatedMinutes = minutes
+        seconds.toString().length < 2 
+        ? formatedSeconds = '0'+ seconds
+        : formatedSeconds = seconds
       return (
         <div className='content'>
           <h2>резульататы теста "{URLprefix}"</h2>
@@ -111,7 +119,7 @@ export const Test = () => {
                 <img src={clock}/>
                 <p>время</p>
               </div>
-              <h3>{minutes}:{seconds} мин.</h3>
+              <h3>{formatedMinutes}:{formatedSeconds} мин.</h3>
             </div>
           </div>
           <div className='res-item accordion-item'>
