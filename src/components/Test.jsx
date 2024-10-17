@@ -9,6 +9,7 @@ import done from './../assets/done.png'
 import stat from './../assets/stack.png'
 import arrow from './../assets/arrow-right.svg'
 import { Link } from 'react-router-dom';
+import {generareRandomList, generateTestObject} from '../utils/TestSetupUtils';
 
 export const Test = () => {
 
@@ -25,6 +26,12 @@ export const Test = () => {
   const testWordsNumber = useTestStore((state) => state.testWordsNumber);
   const increaseQuestionNumber = useTestStore((state) => state.increaseQuestionNumber);
   const addResult = useTestStore((state) => state.addResult);
+
+  const setTestArray = useTestStore((state) => state.setTestArray);
+  const resetQuestionNumber = useTestStore((state) => state.resetQuestionNumber);
+  const resetResult = useTestStore((state) => state.resetResult);
+  const setTestWordsNumber = useTestStore((state) => state.setTestWordsNumber);
+  const setStartTime = useTestStore((state) => state.setStartTime);
 
   
   
@@ -46,6 +53,20 @@ export const Test = () => {
     if (questionNumber + 1 === testWordsNumber) {
       setEndTime()
     }
+  }
+
+  function resetTest(t){
+    console.log('start creating test array');
+    console.log(storeTests[URLprefix])
+
+    const checkingWords = generareRandomList(Object.keys(words), t.wordsCounter)
+    const testArr = generateTestObject(checkingWords);
+    resetQuestionNumber();
+    resetResult();
+    setTestWordsNumber(t.wordsCounter)
+    setTestArray(testArr);
+    setStartTime();
+    console.log('creating test array done');
   }
   
   if (possibleURLs.find((el) => el === URLprefix) && testArray !== null) {
@@ -94,7 +115,7 @@ export const Test = () => {
             <img className='accordion-arrow' src={arrow}/>
           </div>
           <div className='group'>
-            <button className='btn-m accent'>again</button>
+            <button onClick={(e) => {resetTest(storeTests[URLprefix])}} className='btn-m accent'>пройти еще раз</button>
             <Link to='/'><button className='btn-m'>на главную страницу</button></Link>
           </div>
         </div>

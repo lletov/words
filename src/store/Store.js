@@ -4,6 +4,7 @@ const useTestStore = create((set) => ({
   tests: {
     "5": {
       url: "5",
+      img: 'star',
       title: "Title 5",
       subtitle: "Subtitle 5",
       wordsCounter: 5,
@@ -11,6 +12,7 @@ const useTestStore = create((set) => ({
     },
     "10": {
       url: "10",
+      img: 'star',
       title: "Title 10",
       subtitle: "Subtitle 10",
       wordsCounter: 10,

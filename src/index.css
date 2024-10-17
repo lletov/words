@@ -122,6 +122,19 @@ h4 {
   align-items: center;
   justify-content: space-between;
 }
+
+.test-card-title {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  padding-bottom: 2px;
+}
+.test-card-title img {
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(12%) sepia(89%) saturate(3539%) hue-rotate(237deg) brightness(90%) contrast(104%);
+}
+
 .test-card img{
   height: 16px;
 }

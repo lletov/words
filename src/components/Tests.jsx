@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { TestCard } from './TestCard';
 import { StatusBar } from './StatusBar';
 import useTestStore from './../store/Store';
-import {generareRandomList, shuffle, generateTestObject} from '../utils/TestSetupUtils';
+import {generareRandomList, generateTestObject} from '../utils/TestSetupUtils';
 import words from '../Words';
 
 
@@ -41,6 +41,7 @@ export const Tests = () => {
     >
             <TestCard
                 title={storeTests[t].title}
+                img={storeTests[t].img}
                 subtitle={storeTests[t].subtitle}
                 wordsCounter={storeTests[t].wordsCounter}
                 time={storeTests[t].time}  
@@ -52,7 +53,7 @@ export const Tests = () => {
     <>
       <StatusBar />
       <div className='content'>
-        <h2>варианты теста</h2>
+        <h2>выберите тест</h2>
         <div className='group'>
           {tests} 
         </div>
@@ -61,3 +62,4 @@ export const Tests = () => {
     
   )
 }
+
