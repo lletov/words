@@ -12,8 +12,9 @@ function App() {
 
   return (
     <div className="App">
-    <Header/>
+    
     <HashRouter>
+    <Header/>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/tests">

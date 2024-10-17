@@ -113,6 +113,37 @@ h4 {
   cursor: pointer;
 }
 
+.header {
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: solid 1px var(--accent-color);
+}
+
+.breadcrumbs{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.breadcrumbs-item{
+  color: var(--accent-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 4px;
+  gap: 4px;
+}
+
+.breadcrumbs-item img {
+  height: 12px;
+  filter: brightness(0) saturate(100%) invert(11%) sepia(72%) saturate(3899%) hue-rotate(234deg) brightness(106%) contrast(101%);
+}
+.breadcrumbs-item p {
+  color: var(--accent-color);
+}
+
 .test-card{
   background-color: var(--white);
   border-radius: 32px;

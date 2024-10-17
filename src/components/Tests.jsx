@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { TestCard } from './TestCard';
-import { StatusBar } from './StatusBar';
 import useTestStore from './../store/Store';
 import {generareRandomList, generateTestObject} from '../utils/TestSetupUtils';
 import words from '../Words';
@@ -51,7 +50,6 @@ export const Tests = () => {
 
   return (
     <>
-      <StatusBar />
       <div className='content'>
         <h2>выберите тест</h2>
         <div className='group'>
