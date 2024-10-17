@@ -72,8 +72,14 @@ export const Test = () => {
   if (possibleURLs.find((el) => el === URLprefix) && testArray !== null) {
     if ((questionNumber + 1) <= testWordsNumber) {
 
-      const variants = testArray[questionNumber].variants.map((v) => <button className='btn-m' onClick={(e)=> {checkAnswer(v)}}>{words[v]}</button>)
-      
+      const variants = testArray[questionNumber].variants.map((v) => 
+        <button 
+      key={v.toString()}
+          className='btn-m' 
+          onClick={(e)=> {checkAnswer(v)}}>
+            {words[v]}
+        </button>
+      )
       return (
         <div className='content'>
           <div className='test-status-bar'>
@@ -87,7 +93,6 @@ export const Test = () => {
     } else {
       let trueAnswersCount = result.filter((el) => {return el.status === true}).length;
       const testTime = (endTime.getTime() - startTime.getTime())/1000
-      console.log(startTime, endTime)
       return (
         <div className='content'>
           <h2>резульататы теста "{URLprefix}"</h2>
