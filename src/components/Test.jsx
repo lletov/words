@@ -83,7 +83,7 @@ export const Test = () => {
       return (
         <div className='content'>
           <div className='test-status-bar'>
-            <button className='btn-s'>назад</button>
+            {/* <button className='btn-s'>назад</button> */}
             <p>{questionNumber +1} / {testWordsNumber}</p>
           </div>
           <h4>{testArray[questionNumber].variants[testArray[questionNumber].correctIndex]}</h4>
@@ -93,6 +93,8 @@ export const Test = () => {
     } else {
       let trueAnswersCount = result.filter((el) => {return el.status === true}).length;
       const testTime = (endTime.getTime() - startTime.getTime())/1000
+      const minutes = Math.floor(testTime / 60);
+      const seconds = Math.floor(testTime - minutes * 60);
       return (
         <div className='content'>
           <h2>резульататы теста "{URLprefix}"</h2>
@@ -109,7 +111,7 @@ export const Test = () => {
                 <img src={clock}/>
                 <p>время</p>
               </div>
-              <h3>{testTime}</h3>
+              <h3>{minutes}:{seconds} мин.</h3>
             </div>
           </div>
           <div className='res-item accordion-item'>
