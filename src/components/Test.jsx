@@ -111,7 +111,7 @@ export const Test = () => {
         <>
         <Breadcrumbs/>
         <div className='content'>
-          <h5>резульататы теста "{URLprefix}"</h5>
+          <h5>Резульататы теста "{URLprefix}"</h5>
           <div className='res-item'>
             <div className='res-numbers-item'>
               <div className='res-tip'>

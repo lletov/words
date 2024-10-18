@@ -55,7 +55,7 @@ export const Tests = () => {
     <>
       <Breadcrumbs/>
       <div className='content'>
-        <h5>выберите тест</h5>
+        <h5>Выберите тест</h5>
         <div className='group'>
           {tests} 
         </div>
