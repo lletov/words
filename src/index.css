@@ -66,6 +66,12 @@ h4 {
   letter-spacing: 4px;
 }
 
+h5 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
 .content {
   padding: 24px 12px;
   display: flex;
@@ -113,22 +119,41 @@ h4 {
   cursor: pointer;
 }
 
+.logo{
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+}
+
+.logo p {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--accent-color);
+}
+
+.logo img{
+  height: 36px;
+  filter: brightness(0) saturate(100%) invert(12%) sepia(89%) saturate(3539%) hue-rotate(237deg) brightness(90%) contrast(104%);
+}
+
 .header {
   padding: 12px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* border-bottom: solid 1px var(--accent-color); */
+  /* border-bottom: solid 2px var(--white); */
 }
 
 .breadcrumbs{
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 4px 12px;
+  /* border-bottom: solid 2px var(--white); */
 }
 
 .breadcrumbs-item{
-  color: var(--accent-color);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -137,11 +162,11 @@ h4 {
 }
 
 .breadcrumbs-item img {
-  height: 12px;
-  filter: brightness(0) saturate(100%) invert(11%) sepia(72%) saturate(3899%) hue-rotate(234deg) brightness(106%) contrast(101%);
+  height: 8px;
+  filter: brightness(0) saturate(100%) invert(53%) sepia(99%) saturate(0%) hue-rotate(232deg) brightness(113%) contrast(109%);
 }
 .breadcrumbs-item p {
-  color: var(--accent-color);
+  color: var(--gray);
 }
 
 .test-card{

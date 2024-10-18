@@ -14,8 +14,8 @@ export const Breadcrumbs = () => {
             to="/"
             style={{ textDecoration: 'none' }}
         >
-            <p style={{fontWeight: '800', color: '#1C29A0'}}>1000WORDS</p>
-        </Link>
+            <p style={{color: '#c1c1c1'}}>главная</p>
+        </Link >
         {pathnames.map((name, index) => {
           breadcrumbPath += `/${name}`;
           const isLast = index === pathnames.length - 1;
@@ -32,6 +32,7 @@ export const Breadcrumbs = () => {
                 {" "}
                 <Link 
                     to={breadcrumbPath}
+                    style={{ textDecoration: 'none' }}
                 >
                     <p>{name}</p>
                 </Link>

@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import {generareRandomList, generateTestObject} from '../utils/TestSetupUtils';
 import { Accordion } from './Accordion';
 import { WordStat } from './WordStat';
+import { Breadcrumbs } from './Breadcrumbs';
 
 export const Test = () => {
 
@@ -81,6 +82,8 @@ export const Test = () => {
         </button>
       )
       return (
+        <>
+        <Breadcrumbs/>
         <div className='content'>
           <div className='test-status-bar'>
             {/* <button className='btn-s'>назад</button> */}
@@ -89,6 +92,7 @@ export const Test = () => {
           <h4>{testArray[questionNumber].variants[testArray[questionNumber].correctIndex]}</h4>
           <div className='group'>{variants}</div>
         </div>
+        </>
       )
     } else {
       let trueAnswersCount = result.filter((el) => {return el.status === true}).length;
@@ -104,8 +108,10 @@ export const Test = () => {
         ? formatedSeconds = '0'+ seconds
         : formatedSeconds = seconds
       return (
+        <>
+        <Breadcrumbs/>
         <div className='content'>
-          <h2>резульататы теста "{URLprefix}"</h2>
+          <h5>резульататы теста "{URLprefix}"</h5>
           <div className='res-item'>
             <div className='res-numbers-item'>
               <div className='res-tip'>
@@ -139,6 +145,7 @@ export const Test = () => {
             <Link to='/'><button className='btn-m'>на главную страницу</button></Link>
           </div>
         </div>
+        </>
       )
     }
   } else {

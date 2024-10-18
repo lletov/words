@@ -4,6 +4,7 @@ import { TestCard } from './TestCard';
 import useTestStore from './../store/Store';
 import {generareRandomList, generateTestObject} from '../utils/TestSetupUtils';
 import words from '../Words';
+import { Breadcrumbs } from './Breadcrumbs';
 
 
 export const Tests = () => {
@@ -52,8 +53,9 @@ export const Tests = () => {
 
   return (
     <>
+      <Breadcrumbs/>
       <div className='content'>
-        <h2>выберите тест</h2>
+        <h5>выберите тест</h5>
         <div className='group'>
           {tests} 
         </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Breadcrumbs } from './Breadcrumbs';
+import { Logo } from './header/Logo';
 
 export const Header = () => {
   
@@ -10,7 +11,8 @@ export const Header = () => {
 
   return (
     <div className='header'>
-      <Breadcrumbs/>
+      <Logo/>
+      {/* <Breadcrumbs/> */}
     </div>
   )
 }
