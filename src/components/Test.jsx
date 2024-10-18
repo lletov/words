@@ -10,6 +10,8 @@ import stat from './../assets/stack.png'
 import arrow from './../assets/arrow-right.svg'
 import { Link } from 'react-router-dom';
 import {generareRandomList, generateTestObject} from '../utils/TestSetupUtils';
+import { Accordion } from './Accordion';
+import { WordStat } from './WordStat';
 
 export const Test = () => {
 
@@ -33,8 +35,6 @@ export const Test = () => {
   const setTestWordsNumber = useTestStore((state) => state.setTestWordsNumber);
   const setStartTime = useTestStore((state) => state.setStartTime);
 
-  
-  
   const result = useTestStore((state) => state.result);
 
   function checkAnswer(answer){
@@ -46,7 +46,7 @@ export const Test = () => {
       console.log('false');
       status = false;
     }
-    const ans = {word: answer, status: status};
+    const ans = {word: testArray[questionNumber].variants[testArray[questionNumber].correctIndex], status: status};
     increaseQuestionNumber();
     addResult(ans)
 
@@ -112,7 +112,7 @@ export const Test = () => {
                 <img src={done}/>
                 <p>результат</p>
               </div>
-              <h3>{trueAnswersCount} / {testArray.length}</h3>
+              <h3>{trueAnswersCount} / {result.length}</h3>
             </div>
             <div className='res-numbers-item'>
               <div className='res-tip'>
@@ -122,13 +122,18 @@ export const Test = () => {
               <h3>{formatedMinutes}:{formatedSeconds} мин.</h3>
             </div>
           </div>
-          <div className='res-item accordion-item'>
+          {/* <div className='res-item accordion-item'>
             <div className='res-item-header'>
               <img src={stat}/>
               <h2>stat</h2>
             </div>
             <img className='accordion-arrow' src={arrow}/>
-          </div>
+          </div> */}
+          <Accordion
+            title={'статистика'}
+            icon={'stat'}
+            content={<WordStat result={result}/>}
+          />
           <div className='group'>
             <button onClick={(e) => {resetTest(storeTests[URLprefix])}} className='btn-m accent'>пройти еще раз</button>
             <Link to='/'><button className='btn-m'>на главную страницу</button></Link>

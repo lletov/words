@@ -258,11 +258,65 @@ h4 {
   filter: brightness(0) saturate(100%) invert(53%) sepia(99%) saturate(0%) hue-rotate(232deg) brightness(113%) contrast(109%);
 }
 
+.accordion {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 24px;
+}
+
+.accordion img {
+  height: 16px;
+}
+
 .accordion-arrow {
   rotate: 90deg;
   filter: brightness(0) saturate(100%) invert(6%) sepia(11%) saturate(94%) hue-rotate(314deg) brightness(99%) contrast(84%);
+  transition: 0.3s ease-in-out;
+}
+.accordion-arrow.active {
+  rotate: 270deg;
+  transition: 0.3s ease-in-out;
 }
 
-.accordion-item:hover{
+.accordion-header{
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-header:hover{
   cursor: pointer;
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.wordstat {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 120px;
+  scrollbar-color: var(--accent-color) var(--light-color);
+  scrollbar-width: 4px;
+}
+
+.wordstat-str {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  border-top: solid 1px var(--gray);
+  padding-top: 6px;
+}
+.wordstat-str-marker{
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
 }

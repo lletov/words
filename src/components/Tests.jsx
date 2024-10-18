@@ -17,6 +17,7 @@ export const Tests = () => {
   const resetQuestionNumber = useTestStore((state) => state.resetQuestionNumber);
   const setTestWordsNumber = useTestStore((state) => state.setTestWordsNumber);
   const setStartTime = useTestStore((state) => state.setStartTime);
+  const resetResult = useTestStore((state) => state.resetResult);
 
   function startTest(t){
     console.log('start creating test array');
@@ -27,6 +28,7 @@ export const Tests = () => {
     setTestWordsNumber(storeTests[t].wordsCounter)
     setTestArray(testArr);
     setStartTime();
+    resetResult();
     console.log('creating test array done');
     return
   }
