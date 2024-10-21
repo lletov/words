@@ -10,18 +10,16 @@ import useTestStore from './store/Store';
 
 function App() {
 
-  const bears = useTestStore((state) => state.bears)
-  console.log(bears)
-
   return (
     <div className="App">
-    <Header/>
+    
     <HashRouter>
+    <Header/>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/tests">
           <Route index element={<Tests />} />
-          <Route path="/tests/:wordsAmount" element={<Test />} />
+          <Route path="/tests/:testName" element={<Test />} />
         </Route>
         <Route path="/wordslist" element={<WordsList />} />
         <Route path="*" element={<NotFound />} />
