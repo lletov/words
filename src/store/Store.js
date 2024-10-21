@@ -2,21 +2,21 @@ import { create } from 'zustand'
 
 const useTestStore = create((set) => ({
   tests: {
-    "5": {
-      url: "5",
+    "50": {
+      url: "50",
       img: 'star',
-      title: "Title 5",
-      subtitle: "Subtitle 5",
-      wordsCounter: 5,
-      time: 10
+      title: "50",
+      subtitle: "Случайные 50 слов",
+      wordsCounter: 50,
+      time: 2
     },
-    "10": {
-      url: "10",
+    "100": {
+      url: "100",
       img: 'star',
-      title: "Title 10",
-      subtitle: "Subtitle 10",
-      wordsCounter: 10,
-      time: 15
+      title: "100",
+      subtitle: "Случайные 100 слов",
+      wordsCounter: 100,
+      time: 4
     }
   },
   testArray: null,

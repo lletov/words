@@ -79,6 +79,18 @@ h5 {
   gap: 24px;
 }
 
+.banner{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  text-align: center;
+}
+
+.banner img {
+  width: 240px;
+}
+
 .group {
   display: flex;
   flex-direction: column;
@@ -360,4 +372,20 @@ h5 {
   height: 120px;
   filter: brightness(0) saturate(100%) invert(53%) sepia(99%) saturate(0%) hue-rotate(232deg) brightness(113%) contrast(109%);
 
+}
+
+.word-list{
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.word-list-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top: solid 1px var(--gray);
+  padding-top: 12px;
 }

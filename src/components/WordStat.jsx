@@ -1,8 +1,6 @@
 import React from 'react'
 
 export const WordStat = ({result}) => {
-    result.map(e => console.log(e))
-    const hg = '78';
     const resultList = result.map(r => 
         <div className='wordstat-str' key={r.word}>
             <h2>{r.word}</h2>
