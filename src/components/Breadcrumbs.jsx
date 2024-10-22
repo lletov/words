@@ -7,6 +7,13 @@ export const Breadcrumbs = () => {
     const location = useLocation();
     const pathnames = location.pathname.split("/").filter((x) => x);
     let breadcrumbPath = "";
+
+    const pathObj = {
+      'tests': 'тесты',
+      '50': 'тест 50',
+      '100': 'тест 100',
+      'wordslist': 'список слов'
+    }
   
     return (
       <div className="breadcrumbs">
@@ -24,7 +31,7 @@ export const Breadcrumbs = () => {
               ? (
               <div className="breadcrumbs-item" key={breadcrumbPath}>
                 <img src={arrow}/>
-                <p>{name}</p>
+                <p>{pathObj[name]}</p>
               </div>
             ) : (
               <div className="breadcrumbs-item" key={breadcrumbPath}>
@@ -34,7 +41,7 @@ export const Breadcrumbs = () => {
                     to={breadcrumbPath}
                     style={{ textDecoration: 'none' }}
                 >
-                    <p>{name}</p>
+                    <p>{pathObj[name]}</p>
                 </Link>
               </div>
             );

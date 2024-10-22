@@ -84,7 +84,7 @@ export const Test = () => {
       return (
         <>
         <Breadcrumbs/>
-        <div className='content'>
+        <div className='test'>
           <div className='test-status-bar'>
             {/* <button className='btn-s'>назад</button> */}
             <p>{questionNumber +1} / {testWordsNumber}</p>

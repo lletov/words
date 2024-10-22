@@ -57,7 +57,7 @@ const words = {
     ask: 'просить',
     asleep: 'спящий',
     attack: 'атаковать',
-    attempt: 'attempt',
+    attempt: 'пытаться',
     attention: 'внимание',
     aunt: 'тетя',
     avoid: 'избегать',
