@@ -1,6 +1,6 @@
 {
-  "name": "test-state",
-  "homepage": "https://lletov.github.io/test-state",
+  "name": "words",
+  "homepage": "https://lletov.github.io/words",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

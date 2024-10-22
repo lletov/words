@@ -25,6 +25,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   background-color: var(--light-color);
+  /* for safari bottom nav panel */
   padding-bottom: env(safe-area-inset-bottom);
 
 
