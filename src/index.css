@@ -10,7 +10,9 @@
   --gray: #c1c1c1;
   margin: 0;
   padding: 0;
-  --border-r: 12px;
+
+  --base-l: 6px;
+  --k: 4;
 }
 
 * {
@@ -111,7 +113,7 @@ h5 {
   gap: 12px;
   /* width: 100%; */
   transform: translate(-50%, 0%);
-  animation: more-animate 4s infinite ease-in-out;
+  animation: more-animate 4s infinite ease-in-out 4s;
 }
 
 .banner-more-btn img {
