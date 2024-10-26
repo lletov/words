@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import useTestStore from './../store/Store';
 import { useParams } from 'react-router-dom';
 import { NotFound } from './NotFound';
@@ -38,6 +38,8 @@ export const Test = () => {
 
   const result = useTestStore((state) => state.result);
 
+  const [testProgress, setTestProgress] = useState(1)
+
   function checkAnswer(answer){
     let status;
     if (answer === testArray[questionNumber].variants[testArray[questionNumber].correctIndex]) {
@@ -49,6 +51,7 @@ export const Test = () => {
     }
     const ans = {word: testArray[questionNumber].variants[testArray[questionNumber].correctIndex], status: status};
     increaseQuestionNumber();
+    setTestProgress(questionNumber + 2);
     addResult(ans)
 
     if (questionNumber + 1 === testWordsNumber) {
@@ -66,6 +69,7 @@ export const Test = () => {
     resetResult();
     setTestWordsNumber(t.wordsCounter)
     setTestArray(testArr);
+    setTestProgress(1);
     setStartTime();
     console.log('creating test array done');
   }
@@ -76,7 +80,7 @@ export const Test = () => {
       const variants = testArray[questionNumber].variants.map((v) => 
         <button 
       key={v.toString()}
-          className='btn-m' 
+          className='btn-m test-btn' 
           onClick={(e)=> {checkAnswer(v)}}>
             {words[v]}
         </button>
@@ -84,13 +88,17 @@ export const Test = () => {
       return (
         <>
         <Breadcrumbs/>
-        <div className='test'>
+        <div className='content test'>
           <div className='test-status-bar'>
             {/* <button className='btn-s'>назад</button> */}
             <p>{questionNumber +1} / {testWordsNumber}</p>
+            <progress className='test-progress'max={testWordsNumber} value={testProgress}></progress>
           </div>
           <h4>{testArray[questionNumber].variants[testArray[questionNumber].correctIndex]}</h4>
-          <div className='group'>{variants}</div>
+          <div className='group test-variants'>
+            <p>Выберите верный перевод</p>
+            {variants}
+          </div>
         </div>
         </>
       )
@@ -141,8 +149,8 @@ export const Test = () => {
             content={<WordStat result={result}/>}
           />
           <div className='group'>
-            <button onClick={(e) => {resetTest(storeTests[URLprefix])}} className='btn-m accent'>пройти еще раз</button>
-            <Link to='/'><button className='btn-m'>на главную страницу</button></Link>
+            <button onClick={(e) => {resetTest(storeTests[URLprefix])}} className='btn-m'>пройти еще раз</button>
+            <Link to='/'><button className='btn-m accent'>на главную страницу</button></Link>
           </div>
         </div>
         </>
