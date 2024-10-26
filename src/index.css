@@ -3,6 +3,7 @@
 :root {
   --accent-color: #FF63A4;
   --accent-hover: #334CDB;
+  --accent-grad: #FF89E0;
   --light-color: #f7f7f7;
   --black: #222;
   --white: #fff;
@@ -80,17 +81,65 @@ h5 {
 }
 
 .banner{
+  /* position: relative; */
   display: flex;
   flex-direction: column;
-  /* gap: 24px; */
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  height: calc(100svh - 84px);
+  justify-content: center;
+  gap: 48px;
+  height: calc(100svh - 84px - 48px);
 }
 
 .banner img {
   width: 240px;
+}
+
+.banner h4{
+  color: var(--accent-color);
+}
+
+.banner p {
+  color: var(--black);
+}
+
+.banner-more-btn{
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  /* width: 100%; */
+  transform: translate(-50%, 0%);
+  animation: more-animate 4s infinite ease-in-out;
+}
+
+.banner-more-btn img {
+  height: 16px;
+  width: 16px;
+  rotate: 90deg;
+}
+
+.banner-more-btn p {
+  color: var(--gray);
+}
+
+@keyframes more-animate {
+  0% {
+      bottom: 24px;
+  }
+  40% {
+    bottom: 24px;
+  }
+  50% {
+    bottom: 4px;
+  }
+  60% {
+    bottom: 24px;
+  }
+  100% {
+    bottom: 24px;
+  }
 }
 
 .group {
@@ -116,8 +165,10 @@ h5 {
 }
 
 .accent{
-  background-color: var(--accent-color);
+  /* background-color: var(--accent-color); */
+  background-image: linear-gradient(30deg, var(--accent-color), var(--accent-grad));
   color: var(--black);
+  border: none;
 }
 
 .test-btn {
@@ -281,7 +332,8 @@ h5 {
   border-radius: 2px;
 }
 ::-webkit-progress-value {
-  background-color: var(--accent-color);
+  /* background-color: var(--accent-color); */
+  background-image: linear-gradient(30deg, var(--accent-color), var(--accent-grad));
   border-radius: 2px;
 }
 

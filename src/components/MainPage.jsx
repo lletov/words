@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import banner from './../assets/banner.png'
+import { Banner } from './Banner';
 
 export const MainPage = () => {
   return (
     <div className='content'>
-      <div className="banner">
+      <Banner/>
+      {/* <div className="banner">
         <img src={banner}/>
         <div className="group">
           <h5>Проверьете свой словарный запас английских слов онлайн!</h5>
@@ -15,7 +17,7 @@ export const MainPage = () => {
           <Link to='/tests'><button className="btn-m accent">проверить знания</button></Link>
           <Link to='/wordslist'><button className="btn-m">список слов</button></Link>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
