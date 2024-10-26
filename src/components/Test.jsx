@@ -141,8 +141,8 @@ export const Test = () => {
             content={<WordStat result={result}/>}
           />
           <div className='group'>
-            <button onClick={(e) => {resetTest(storeTests[URLprefix])}} className='btn-m accent'>пройти еще раз</button>
-            <Link to='/'><button className='btn-m'>на главную страницу</button></Link>
+            <button onClick={(e) => {resetTest(storeTests[URLprefix])}} className='btn-m'>пройти еще раз</button>
+            <Link to='/'><button className='btn-m accent'>на главную страницу</button></Link>
           </div>
         </div>
         </>
