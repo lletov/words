@@ -6,7 +6,7 @@ export const Banner = () => {
   return (
     <div className='banner'>
         <div className='group'>
-            <h4>WORDS - оналйн тестирование на знание английского</h4>
+            <h4>WORDS - онлайн тестирование на знание английского</h4>
             <p>проверьте свои знания языка при помощи онлайн теста, результат покажем сразу</p>
         </div>
         <Link to='/tests'><button className="btn-m accent">пройти тест</button></Link>
