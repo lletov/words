@@ -120,6 +120,12 @@ h5 {
   color: var(--black);
 }
 
+.test-btn {
+  background-color: var(--light-color);
+  color: var(--black);
+  border: none;
+}
+
 .btn-s {
   height: 32px;
   padding: 0px 12px;
@@ -239,24 +245,48 @@ h5 {
 }
 
 .test {
-  padding: 12px;
+  padding: 24px;
+  margin: 24px;
+  background-color: var(--white);
+  border-radius: 32px;
   display: flex;
   flex-direction: column;
-  /* gap: 24px; */
-  align-items: center;
+  gap: 48px;
+  align-items: start;
   text-align: center;
   justify-content: space-between;
-  height: calc(100svh - 84px - 17px);
+  /* height: calc(100svh - 84px - 17px); */
 }
 
 .test-status-bar{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
 }
+
 .test-status-bar p {
   color: var(--gray);
+}
+
+.test-progress {
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--light-color);
+  width: 160px;
+}
+::-webkit-progress-bar {
+  background-color: var(--light-color);
+  border-radius: 2px;
+}
+::-webkit-progress-value {
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.test-variants {
+  align-items: start;
 }
 
 .res-item {
