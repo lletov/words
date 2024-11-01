@@ -15,12 +15,16 @@ export const WeatherCard = ({city, lat, lng}) => {
         },[lastFetchTime]);
 
     async function getWeather(lat, lng){
+        try {
+            let d = new Date();
+            const data = await fetchWeatherData(lat,lng)
+            setAPITemp(Math.round(data.current.temperature2m))
+            console.log('get weather in ' + d.toUTCString());
+          } catch (e) {
+            console.error(e.message);            
+          }
 
-        let d = new Date();
-        console.log('get weather in ' + d.toUTCString());
-
-        const data = await fetchWeatherData(lat,lng)
-        setAPITemp(Math.round(data.current.temperature2m))
+        
     }
 
     APItemp !== null 
