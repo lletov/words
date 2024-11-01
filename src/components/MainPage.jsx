@@ -2,11 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import banner from './../assets/banner.png'
 import { Banner } from './Banner';
+import { Weather } from './Weather';
 
 export const MainPage = () => {
   return (
     <div className='content'>
       <Banner/>
+      <Weather/>
       {/* <div className="banner">
         <img src={banner}/>
         <div className="group">
