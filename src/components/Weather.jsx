@@ -28,7 +28,7 @@ export const Weather = () => {
     const cards = Object.keys(citiesObj).map((el) => <WeatherCard key={el} city={citiesObj[el].name} lat={citiesObj[el].lat} lng={citiesObj[el].lng}/>)
 
   return (
-    <div className='weather'>
+    <div className='section'>
         <h5>Погода в Англии</h5>
         <p>Посмотреть обстановку в разных городах</p>
         <div className='weather-cards'>{cards}</div>
