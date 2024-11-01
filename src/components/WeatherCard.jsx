@@ -23,13 +23,11 @@ export const WeatherCard = ({city, lat, lng}) => {
           } catch (e) {
             console.error(e.message);            
           }
-
-        
     }
 
     APItemp !== null 
         ? APItemp > 0 
-            ? temp = "+" + APItemp
+            ? temp = "+ " + APItemp
             : temp = APItemp
         : temp = '--'
 
