@@ -9,7 +9,7 @@ export const DictionaryCard = () => {
 const counter = Object.keys(words).length
   return (
     <div  className='test-card'>
-      <div className='test-card-content'>
+      <div className='test-card-content dictionary'>
         <div className='test-card-header'>
           <div className='test-card-title'>
             <img src={dict}/>

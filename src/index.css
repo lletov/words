@@ -276,6 +276,10 @@ h5 {
   gap: 24px;
 }
 
+.test-card-content.dictionary {
+  gap: 64px;
+}
+
 .test-card-tips{
   display: flex;
   flex-direction: row;

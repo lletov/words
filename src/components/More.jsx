@@ -9,10 +9,13 @@ export const More = () => {
             <h5>Разное</h5>
             <p>Собрали полезные разделы в одном месте</p>
         </div>
-        <Link 
-            style={{ textDecoration: 'none' }} 
-            to={'/wordslist'}
-        ><DictionaryCard/></Link>
+        <div style={{width: '100%'}}>
+          <Link 
+              style={{ textDecoration: 'none' }} 
+              to={'/wordslist'}
+          ><DictionaryCard/></Link>
+        </div>
+        
     </div>
   )
 }
