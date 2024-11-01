@@ -3,18 +3,28 @@ import { useState, useEffect } from 'react'
 import {fetchWeatherData} from './../utils/WeatherUtils'
 
 export const WeatherCard = ({city, lat, lng}) => {
-    useEffect(() => {
-        getWeather(lat,lng)
-        },[]);
 
     let temp
     const [APItemp, setAPITemp] = useState(null)
+    const [lastFetchTime, setLastFetchTime] = useState(null)
+
+    useEffect(() => {
+        getWeather(lat,lng)
+        // update weather every timeout (100 min)
+        setTimeout(() => setLastFetchTime(Date.now()), 6000000);
+        },[lastFetchTime]);
+
+    
+    
 
     async function getWeather(lat, lng){
+
+        let d = new Date();
+        console.log('get weather in ' + d.toUTCString());
+
         const data = await fetchWeatherData(lat,lng)
         setAPITemp(Math.round(data.current.temperature2m))
     }
-    getWeather(lat,lng)
 
     APItemp !== null 
         ? APItemp > 0 

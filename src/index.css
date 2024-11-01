@@ -487,8 +487,11 @@ h5 {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  gap: 24px;
+  gap: 12px;
   overflow: auto;
+}
+.weather-cards::-webkit-scrollbar {
+  display: none;
 }
 
 .weather-card{
