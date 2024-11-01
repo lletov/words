@@ -276,6 +276,10 @@ h5 {
   gap: 24px;
 }
 
+.test-card-content.dictionary {
+  gap: 64px;
+}
+
 .test-card-tips{
   display: flex;
   flex-direction: row;
@@ -470,7 +474,13 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: start;
+  gap: 12px;
+}
+.section-header {
+  display: flex;
+  flex-direction: column;
   gap: 4px;
+  align-items: start;
 }
 
 .word-list{
@@ -490,7 +500,6 @@ h5 {
 }
 
 .weather-cards{
-  padding: 12px 0px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;

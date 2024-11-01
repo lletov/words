@@ -7,6 +7,7 @@ import { MainPage } from './components/MainPage';
 import { Test } from './components/Test';
 import { NotFound } from './components/NotFound';
 import useTestStore from './store/Store';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
     
     <HashRouter>
+    <ScrollToTop />
     <Header/>
       <Routes>
         <Route path="/" element={<MainPage />} />
