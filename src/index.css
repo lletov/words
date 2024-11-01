@@ -481,3 +481,24 @@ h5 {
   border-top: solid 1px var(--gray);
   padding-top: 12px;
 }
+
+.weather-cards{
+  padding: 12px 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 24px;
+  overflow: auto;
+}
+
+.weather-card{
+  background-color: var(--white);
+  border-radius:32px;
+  padding: 24px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+  width: 40%;
+}

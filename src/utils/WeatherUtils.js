@@ -14,7 +14,7 @@ import { fetchWeatherApi } from 'openmeteo';
 // 85, 86	Snow showers slight and heavy
 
 export async function fetchWeatherData(lat, lng){
-    console.log(lat,lng)
+    // console.log(lat,lng)
     const params = {
       // Moscow
       "latitude": lat, 
