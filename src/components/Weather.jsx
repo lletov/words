@@ -29,8 +29,10 @@ export const Weather = () => {
 
   return (
     <div className='section'>
-        <h5>Погода в Англии</h5>
-        <p>Посмотреть обстановку в разных городах</p>
+        <div className='section-header'>
+            <h5>Погода в Англии</h5>
+            <p>Посмотреть обстановку в разных городах</p>
+        </div>
         <div className='weather-cards'>{cards}</div>
     </div>
   )

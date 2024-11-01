@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 import banner from './../assets/banner.png'
 import { Banner } from './Banner';
 import { Weather } from './Weather';
+import { More } from './More';
 
 export const MainPage = () => {
   return (
     <div className='content'>
       <Banner/>
       <Weather/>
+      <More/>
+
       {/* <div className="banner">
         <img src={banner}/>
         <div className="group">
