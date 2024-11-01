@@ -14,9 +14,6 @@ export const WeatherCard = ({city, lat, lng}) => {
         setTimeout(() => setLastFetchTime(Date.now()), 6000000);
         },[lastFetchTime]);
 
-    
-    
-
     async function getWeather(lat, lng){
 
         let d = new Date();
