@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import arrow from './../assets/arrow-right.svg'
+import banner from './../assets/banner.png'
 
 export const Banner = () => {
     const raw = ""
@@ -19,6 +20,7 @@ export const Banner = () => {
 
   return (
     <div className='banner'>
+        <img src={banner}/>
         <div className='group'>
             <h4>WORDS - онлайн тестирование на знание английского</h4>
             <p>проверьте свои знания языка при помощи онлайн теста, результат покажем сразу</p>
