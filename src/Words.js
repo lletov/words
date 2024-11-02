@@ -328,7 +328,7 @@ const words = {
     glare: "блики",
     glass: "стекло",
     go: "идти",
-    God: "Бог",
+    god: "Бог",
     gone: "ушел",
     gonna: "собираюсь",
     good: "хороший",
