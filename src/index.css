@@ -502,6 +502,8 @@ h5 {
   padding-top: 12px;
 }
 .letter-pointer{
+  position: sticky;
+  top: 12px;
   height: 32px;
   width: 32px;
   border-radius: 30px;
