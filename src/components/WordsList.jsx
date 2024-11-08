@@ -1,20 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import words from './../Words'
 import { Breadcrumbs } from './Breadcrumbs'
+import { WordsListNav } from './WordsListNav'
 
 export const WordsList = () => {
-  // const wordsList = Object.keys(words).map(w => 
-  //   <div className='word-list-row' key={w}>
-  //       <h2>{w}</h2>
-  //       <h2>{words[w]}</h2>
-  //   </div>
-  // )
+  
   let currentLetter = ''
   const wordsList = Object.keys(words).map(w => {
     if (w.split('')[0] !== currentLetter) {
       currentLetter = w.split('')[0]
       return <>
         <div className='letter-pointer'>{currentLetter.toUpperCase()}</div>
+        <div id={'letter-' + currentLetter}></div>
         <div className='word-list-row' key={w}>
           <h2>{w}</h2>
           <h2>{words[w]}</h2>
@@ -32,9 +29,13 @@ export const WordsList = () => {
 return (
   <>
     <Breadcrumbs/>
+    {/* <WordsListNav/> */}
     <div className='word-list'>
-      <h5>Список слов</h5>
-      {wordsList}
+      <div style={{display: 'flex', alignItems: 'center'}}><h5>Список слов</h5></div>
+      <WordsListNav/>
+      <div className='word-list-list'>
+        {wordsList}
+      </div>
     </div>
   </>
   
