@@ -6,7 +6,7 @@ import arrow from './../assets/arrow-right.svg'
 
 export const WordsListNav = () => {
 
-  const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm']
+  const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
   const [currentLetter, setCurrentLetter] = useState(null)
   const [scrollPosition, setScrollPosition] = useState(0);
 
