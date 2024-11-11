@@ -10,7 +10,7 @@ export const MainPage = () => {
     <div className='content'>
       <Banner/>
       <More/>
-      <Weather/>
+      {/* <Weather/> */}
 
       {/* <div className="banner">
         <img src={banner}/>
