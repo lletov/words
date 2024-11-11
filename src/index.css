@@ -526,6 +526,10 @@ h5 {
   border-radius: 30px;
 }
 
+.word-list-letters-links::-webkit-scrollbar {
+  display: none;
+}
+
 .word-list-nav-letter{
   color: var(--black);
   font-size: 20px;
