@@ -2,24 +2,27 @@ import React from 'react'
 import dict from './../assets/dictionary.png'
 import arrow from './../assets/arrow-right.svg'
 import stack from './../assets/stack.png'
-import words from './../Words'
 
-export const DictionaryCard = () => {
+export const BigCard = ({title, text, counter, param, icon}) => {
 
-const counter = Object.keys(words).length
+const images = {
+  dict: dict,
+  tests: stack
+}
+
   return (
     <div  className='test-card'>
-      <div className='test-card-content dictionary'>
+      <div className='test-card-content big'>
         <div className='test-card-header'>
           <div className='test-card-title'>
-            <img src={dict}/>
-            <h3>Словарь</h3>
+            <img src={images[icon]}/>
+            <h3>{title}</h3>
           </div>
-          <p>Все слова, которые могут встретиться в тесте</p>
+          <p>{text}</p>
         </div>
           <div className='test-card-tip'>
             <img src={stack}/>
-            <p>{counter} слов</p>
+            <p>{counter} {param}</p>
           </div>
       </div>
       <img src={arrow}/>

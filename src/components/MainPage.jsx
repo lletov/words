@@ -9,8 +9,8 @@ export const MainPage = () => {
   return (
     <div className='content'>
       <Banner/>
-      <Weather/>
       <More/>
+      <Weather/>
 
       {/* <div className="banner">
         <img src={banner}/>
