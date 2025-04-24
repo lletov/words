@@ -14,6 +14,8 @@ Live Demo: [Words](https://lletov.github.io/words/)
 
 - **Local Storage API:** For persisting user data between sessions.
 
+- **Weather API Integration:** Displaying current local weather conditions.
+
 - **React Hooks:** Utilization of useState and useEffect for state management and side effects.
 
 - **Component-Based Architecture:** Modular and reusable components for scalability.
