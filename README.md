@@ -56,6 +56,7 @@ words/
 ├── src/
 │   ├── components/
 │   │   └── WordList.js
+│   │   └── ...
 │   ├── App.js
 │   └── index.js
 ├── package.json
