@@ -5,15 +5,6 @@ Words is a web application designed to assist users in expanding their English v
 ## 📌 Project Overview
 Live Demo: [Words](https://lletov.github.io/words/)
 
-## ✨ Features
-- **Interactive Word Games:** Engage users in various word-based challenges to improve their vocabulary.
-
-- **Responsive Design:** Ensures optimal user experience across different devices and screen sizes.
-
-- **State Management:** Utilizes React's state management for dynamic content rendering and user interaction.
-
-- **Modular Architecture:** Organized codebase with reusable components for scalability and maintainability.
-
 ## 🛠️ Technologies Used
 - **React:** Front-end library for building user interfaces.
 
