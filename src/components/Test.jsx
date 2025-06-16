@@ -42,14 +42,11 @@ export const Test = () => {
 
   const [testProgress, setTestProgress] = useState(1)
 
-  if (statistic) {
-    if (!localStorage.getItem('statistic')) {
+  if (!localStorage.getItem('statistic')) {
       localStorage.setItem('statistic', JSON.stringify({}))
-    }
   }
 
   function checkAnswer(answer){
-    let statistic = JSON.parse(localStorage.getItem('statistic'));
 
     let status;
     if (answer === testArray[questionNumber].variants[testArray[questionNumber].correctIndex]) {
