@@ -4,7 +4,7 @@ const statistic = JSON.parse(localStorage.getItem('statistic'));
 let statisticOn = localStorage.getItem('statisticOn')
 
 export function setWordStatistic(word, status) {
-    if (statisticOn) {
+    if (statisticOn === 'true') {
         statistic[word] 
             ? statistic[word].show += 1
             : statistic[word] = {show: 1, correct: 0}
@@ -16,7 +16,7 @@ export function setWordStatistic(word, status) {
 }
 
 export function getWordStatistic(word) {
- if (statisticOn && statistic && statistic[word]) {
-    return statistic[word].correct/statistic[word].show * 100 + '%'
+ if (statisticOn === 'true' && statistic && statistic[word]) {
+    return Math.round(statistic[word].correct/statistic[word].show * 100) + '%'
  }
 }
