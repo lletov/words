@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import words from './../Words'
 import { Breadcrumbs } from './Breadcrumbs'
 import { WordsListNav } from './WordsListNav'
+import { getWordStatistic } from '../utils/LocalStorageUtils'
 
 export const WordsList = () => {
   
@@ -14,6 +15,7 @@ export const WordsList = () => {
         <div id={'letter-' + currentLetter}></div>
         <div className='word-list-row' key={w}>
           <h2>{w}</h2>
+          <h2>{getWordStatistic(w)}</h2>
           <h2>{words[w].translation.join(', ')}</h2>
       </div>
       </>
@@ -21,6 +23,7 @@ export const WordsList = () => {
     } else {
       return <div className='word-list-row' key={w}>
         <h2>{w}</h2>
+        <h2>{getWordStatistic(w)}</h2>
         <h2>{words[w].translation.join(', ')}</h2>
       </div>
     }

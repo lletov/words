@@ -13,6 +13,7 @@ import {generareRandomList, generateTestObject} from '../utils/TestSetupUtils';
 import { Accordion } from './Accordion';
 import { WordStat } from './WordStat';
 import { Breadcrumbs } from './Breadcrumbs';
+import { setWordStatistic } from '../utils/LocalStorageUtils';
 
 export const Test = () => {
 
@@ -37,10 +38,19 @@ export const Test = () => {
   const setStartTime = useTestStore((state) => state.setStartTime);
 
   const result = useTestStore((state) => state.result);
+  const statistic = useTestStore((state) => state.statistic);
 
   const [testProgress, setTestProgress] = useState(1)
 
+  if (statistic) {
+    if (!localStorage.getItem('statistic')) {
+      localStorage.setItem('statistic', JSON.stringify({}))
+    }
+  }
+
   function checkAnswer(answer){
+    let statistic = JSON.parse(localStorage.getItem('statistic'));
+
     let status;
     if (answer === testArray[questionNumber].variants[testArray[questionNumber].correctIndex]) {
       console.log('true');
@@ -53,6 +63,7 @@ export const Test = () => {
     increaseQuestionNumber();
     setTestProgress(questionNumber + 2);
     addResult(ans)
+    setWordStatistic(ans.word, ans.status)
 
     if (questionNumber + 1 === testWordsNumber) {
       setEndTime()

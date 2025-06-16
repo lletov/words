@@ -33,6 +33,7 @@ const useTestStore = create((set) => ({
   startTime: null,
   endTime: null, 
   result: [],
+  statistic: true,
 
   // increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
   // removeAllBears: () => set({ bears: 0 }),
@@ -47,6 +48,8 @@ const useTestStore = create((set) => ({
   setEndTime: () => set({ endTime: new Date()}),
   addResult: (el) => set((state) => ({ result: [...state.result, el] })),
   resetResult: (el) => set((state) => ({ result: [] })),
+  turnOnStatistic: () => set((state) => ({ statistic: true})),
+  turnOffStatistic: () => set((state) => ({ statistic: false})),
 }))
 
 export default useTestStore
