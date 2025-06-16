@@ -79,10 +79,10 @@ export const Test = () => {
 
       const variants = testArray[questionNumber].variants.map((v) => 
         <button 
-      key={v.toString()}
+          key={v.toString()}
           className='btn-m test-btn' 
           onClick={(e)=> {checkAnswer(v)}}>
-            {words[v]}
+            {words[v].translation.join(', ')}
         </button>
       )
       return (

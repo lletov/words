@@ -25,6 +25,7 @@ export const Tests = () => {
 
     const checkingWords = generareRandomList(Object.keys(words), storeTests[t].wordsCounter)
     const testArr = generateTestObject(checkingWords);
+    console.log(testArr)
     resetQuestionNumber();
     setTestWordsNumber(storeTests[t].wordsCounter)
     setTestArray(testArr);

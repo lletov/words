@@ -2,6 +2,14 @@ import { create } from 'zustand'
 
 const useTestStore = create((set) => ({
   tests: {
+    "5": {
+      url: "5",
+      img: 'star',
+      title: "5",
+      subtitle: "Случайные 5 слов",
+      wordsCounter: 5,
+      time: 2
+    },
     "50": {
       url: "50",
       img: 'star',
