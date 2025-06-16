@@ -1,12 +1,7 @@
-import useTestStore from './../store/Store';
-
-function getStatisticState() {
-  const state = useTestStore.getState(); 
-  return state.statistic;
-}
-let statisticOn = getStatisticState
+// add state, that shoul be in ls too!
 
 const statistic = JSON.parse(localStorage.getItem('statistic'));
+let statisticOn = localStorage.getItem('statisticOn')
 
 export function setWordStatistic(word, status) {
     if (statisticOn) {
