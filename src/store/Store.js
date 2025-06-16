@@ -10,22 +10,22 @@ const useTestStore = create((set) => ({
       wordsCounter: 5,
       time: 2
     },
-    "50": {
-      url: "50",
-      img: 'star',
-      title: "50",
-      subtitle: "Случайные 50 слов",
-      wordsCounter: 50,
-      time: 2
-    },
-    "100": {
-      url: "100",
-      img: 'star',
-      title: "100",
-      subtitle: "Случайные 100 слов",
-      wordsCounter: 100,
-      time: 4
-    }
+    // "50": {
+    //   url: "50",
+    //   img: 'star',
+    //   title: "50",
+    //   subtitle: "Случайные 50 слов",
+    //   wordsCounter: 50,
+    //   time: 2
+    // },
+    // "100": {
+    //   url: "100",
+    //   img: 'star',
+    //   title: "100",
+    //   subtitle: "Случайные 100 слов",
+    //   wordsCounter: 100,
+    //   time: 4
+    // }
   },
   testArray: null,
   questionNumber: 0,

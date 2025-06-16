@@ -14,14 +14,14 @@ export const WordsList = () => {
         <div id={'letter-' + currentLetter}></div>
         <div className='word-list-row' key={w}>
           <h2>{w}</h2>
-          <h2>{words[w]}</h2>
+          <h2>{words[w].translation.join(', ')}</h2>
       </div>
       </>
       
     } else {
       return <div className='word-list-row' key={w}>
         <h2>{w}</h2>
-        <h2>{words[w]}</h2>
+        <h2>{words[w].translation.join(', ')}</h2>
       </div>
     }
     }
