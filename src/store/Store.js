@@ -33,6 +33,7 @@ const useTestStore = create((set) => ({
   startTime: null,
   endTime: null, 
   result: [],
+  statisticOn: localStorage.getItem('statisticOn'),
 
   // increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
   // removeAllBears: () => set({ bears: 0 }),
@@ -47,6 +48,7 @@ const useTestStore = create((set) => ({
   setEndTime: () => set({ endTime: new Date()}),
   addResult: (el) => set((state) => ({ result: [...state.result, el] })),
   resetResult: (el) => set((state) => ({ result: [] })),
+  setStatisticOn: (n) => set({ statisticOn: n }),
 }))
 
 export default useTestStore

@@ -4,12 +4,14 @@ import banner from './../assets/banner.png'
 import { Banner } from './Banner';
 import { Weather } from './Weather';
 import { More } from './More';
+import Checkbox from './Checkbox';
 
 export const MainPage = () => {
   return (
     <div className='content'>
       <Banner/>
       <More/>
+      <Checkbox/>
       {/* <Weather/> */}
 
       {/* <div className="banner">
