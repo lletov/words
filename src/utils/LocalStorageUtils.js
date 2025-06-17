@@ -1,5 +1,3 @@
-// add state, that shoul be in ls too!
-
 const statistic = JSON.parse(localStorage.getItem('statistic'));
 let statisticOn = localStorage.getItem('statisticOn')
 
