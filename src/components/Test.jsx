@@ -38,7 +38,6 @@ export const Test = () => {
   const setStartTime = useTestStore((state) => state.setStartTime);
 
   const result = useTestStore((state) => state.result);
-  const statistic = useTestStore((state) => state.statistic);
 
   const [testProgress, setTestProgress] = useState(1)
 

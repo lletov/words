@@ -3,8 +3,12 @@ import words from './../Words'
 import { Breadcrumbs } from './Breadcrumbs'
 import { WordsListNav } from './WordsListNav'
 import { getWordStatistic } from '../utils/LocalStorageUtils'
+import useTestStore from './../store/Store';
 
 export const WordsList = () => {
+
+  const statisticOn = useTestStore((state) => state.statisticOn);
+  const statistic = JSON.parse(localStorage.getItem('statistic'));
   
   let currentLetter = ''
   const wordsList = Object.keys(words).map(w => {
@@ -15,7 +19,7 @@ export const WordsList = () => {
         <div id={'letter-' + currentLetter}></div>
         <div className='word-list-row' key={w}>
           <h2>{w}</h2>
-          <p>{getWordStatistic(w)}</p>
+          <p>{getWordStatistic(w, statisticOn, statistic)}</p>
           <h2>{words[w].translation.join(', ')}</h2>
       </div>
       </>
@@ -23,7 +27,7 @@ export const WordsList = () => {
     } else {
       return <div className='word-list-row' key={w}>
         <h2>{w}</h2>
-        <p>{getWordStatistic(w)}</p>
+        <p>{getWordStatistic(w, statisticOn, statistic)}</p>
         <h2>{words[w].translation.join(', ')}</h2>
       </div>
     }
