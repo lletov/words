@@ -16,8 +16,8 @@ export default function Checkbox({title, img, subtitle, state}) {
     if (newValue == false){localStorage.setItem('statistic', JSON.stringify({}))}
   }
   return (
-    <div  className='test-card'>
-        <div className='test-card-content'>
+    <div  className='test-card' style={{width: '100%'}}>
+        <div className='test-card-content' style={{width: '100%'}}>
             <div className='test-card-header'>
               <div className='test-card-title'>
                 {/* <img src={imgURL[img]}/> */}
