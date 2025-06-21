@@ -11,7 +11,6 @@ export const MainPage = () => {
     <div className='content'>
       <Banner/>
       <More/>
-      <Checkbox/>
       {/* <Weather/> */}
 
       {/* <div className="banner">

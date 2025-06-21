@@ -17,12 +17,22 @@ export default function Checkbox({title, img, subtitle, state}) {
   }
   return (
     <div  className='test-card'>
-        <p>Cтатистика</p>
-        <input type='checkbox' checked={statisticOn === 'true' ? true : false} onChange={handleChange}/>
-        <Switch 
-            checked={statisticOn === 'true' ? true : false}
-            onCheckedChange={handleChange}
-        />
+        <div className='test-card-content'>
+            <div className='test-card-header'>
+              <div className='test-card-title'>
+                {/* <img src={imgURL[img]}/> */}
+                <h3>Cтатистика</h3>
+              </div>
+              <p>Собираем статистику ваших ответов на этом устройстве</p>
+            </div>
+            <div className='test-card-tips' style={{justifyContent: 'space-between'}}>
+                <p>Статус: {statisticOn === 'true' ? 'Включено' : 'Отключено'}</p>
+                <Switch
+                    checked={statisticOn === 'true' ? true : false}
+                    onCheckedChange={handleChange}
+                />
+            </div>
+        </div>
     </div>
   )
 }

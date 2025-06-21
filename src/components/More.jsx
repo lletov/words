@@ -3,6 +3,7 @@ import { BigCard } from './BigCard'
 import { Link } from 'react-router-dom'
 import words from '../Words'
 import useTestStore from './../store/Store';
+import Checkbox from './Checkbox';
 
 export const More = () => {
   const storeTests = useTestStore((state) => state.tests)
@@ -38,6 +39,11 @@ export const More = () => {
             icon='tests'
           /></Link>
         </div>
+        <div className='section-header'>
+            <h5>Дополнительно</h5>
+            <p>Полезные функции</p>
+        </div>
+        <Checkbox/>
     </div>
   )
 }
