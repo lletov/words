@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import useTestStore from './../store/Store';
+import { Switch } from "@/components/components/ui/switch"
 
 export default function Checkbox({title, img, subtitle, state}) {
 
@@ -18,6 +19,10 @@ export default function Checkbox({title, img, subtitle, state}) {
     <div  className='test-card'>
         <p>Cтатистика</p>
         <input type='checkbox' checked={statisticOn === 'true' ? true : false} onChange={handleChange}/>
+        <Switch 
+            checked={statisticOn === 'true' ? true : false}
+            onCheckedChange={handleChange}
+        />
     </div>
   )
 }
