@@ -4,11 +4,23 @@ import { Breadcrumbs } from './Breadcrumbs'
 import { WordsListNav } from './WordsListNav'
 import { getWordStatistic } from '../utils/LocalStorageUtils'
 import useTestStore from './../store/Store';
+import Filters from './Filters'
 
 export const WordsList = () => {
 
   const statisticOn = useTestStore((state) => state.statisticOn);
   const statistic = JSON.parse(localStorage.getItem('statistic'));
+
+  const filterItems = [
+    'All',
+    'A1',
+    'B1',
+    'C1'
+  ]
+
+  function filterSelected(selected){
+    console.log(selected)
+  }
   
   let currentLetter = ''
   const wordsList = Object.keys(words).map(w => {
@@ -40,6 +52,11 @@ return (
     <div className='word-list'>
       <div style={{display: 'flex', alignItems: 'center'}}><h5>Список слов</h5></div>
       <WordsListNav/>
+      <Filters
+        items={filterItems} 
+        onSelect={filterSelected} 
+        defaultSelected='All'
+      />
       <div className='word-list-list'>
         {wordsList}
       </div>
