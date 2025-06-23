@@ -7,7 +7,7 @@ export default function Filters ({ items, onSelect, selected }) {
   };
 
   return (
-    <div className="test-card-tip">
+    <div className="res-tip">
       {items.map((item) => (
         <button
           key={item}

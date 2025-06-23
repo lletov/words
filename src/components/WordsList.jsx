@@ -41,16 +41,20 @@ export const WordsList = () => {
         <div className='letter-pointer'>{currentLetter.toUpperCase()}</div>
         <div id={'letter-' + currentLetter}></div>
         <div className='word-list-row' key={w}>
-          <h2>{w}</h2>
-          <p>{getWordStatistic(w, statisticOn, statistic)}</p>
+          <div className="test-card-tip">
+            <h2>{w}</h2>
+            <p>{getWordStatistic(w, statisticOn, statistic)}</p>
+          </div>
           <h2>{words[w].translation.join(', ')}</h2>
       </div>
       </>
       
     } else {
       return <div className='word-list-row' key={w}>
-        <h2>{w}</h2>
-        <p>{getWordStatistic(w, statisticOn, statistic)}</p>
+        <div className="test-card-tip">
+            <h2>{w}</h2>
+            <p>{getWordStatistic(w, statisticOn, statistic)}</p>
+        </div>
         <h2>{words[w].translation.join(', ')}</h2>
       </div>
     }
@@ -60,14 +64,14 @@ return (
   <>
     <Breadcrumbs/>
     {/* <WordsListNav/> */}
-    <div className='word-list'>
-      <div style={{display: 'flex', alignItems: 'center'}}><h5>Список слов</h5></div>
-      <WordsListNav/>
-      <Filters
+    <Filters
         items={filterItems} 
         onSelect={filterSelected} 
         selected={selectedFilter}
       />
+    <div className='word-list'>
+      <div style={{display: 'flex', alignItems: 'center'}}><h5>Список слов</h5></div>
+      <WordsListNav/>
       <div className='word-list-list'>
         {wordsList}
       </div>
