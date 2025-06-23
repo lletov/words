@@ -10,6 +10,9 @@ export const WordsList = () => {
 
   const statisticOn = useTestStore((state) => state.statisticOn);
   const statistic = JSON.parse(localStorage.getItem('statistic'));
+  
+  const [selectedFilter, setSelectedFilter] = useState('All')
+  const [filteredWordList, setFilteredWordList] = useState(words)
 
   const filterItems = [
     'All',
@@ -18,12 +21,20 @@ export const WordsList = () => {
     'C1'
   ]
 
-  function filterSelected(selected){
-    console.log(selected)
-  }
+  function filterSelected(selected) {
+    setSelectedFilter(selected)
+    let filteredObj = words
+    if (selected !== 'All')(
+      filteredObj = Object.fromEntries(Object.entries(words).filter(
+          ([_, value]) => value.level.includes(selected)
+        )
+      )
+    )
+    setFilteredWordList(filteredObj)
+}
   
   let currentLetter = ''
-  const wordsList = Object.keys(words).map(w => {
+  const wordsList = Object.keys(filteredWordList).map(w => {
     if (w.split('')[0] !== currentLetter) {
       currentLetter = w.split('')[0]
       return <>
@@ -55,7 +66,7 @@ return (
       <Filters
         items={filterItems} 
         onSelect={filterSelected} 
-        defaultSelected='All'
+        selected={selectedFilter}
       />
       <div className='word-list-list'>
         {wordsList}

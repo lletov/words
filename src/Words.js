@@ -21,7 +21,7 @@ const words = {
     },
     'dance': {
         translation: ['танец'],
-        level: ['A1', 'A2'],
+        level: ['B1'],
         category: ['fruits', 'things']
     },
     'deep': {
