@@ -20,10 +20,22 @@ export const Tests = () => {
   const setStartTime = useTestStore((state) => state.setStartTime);
   const resetResult = useTestStore((state) => state.resetResult);
 
+const allKeys = Object.keys(words);
+
+  const testStartArrays = {
+    '5': allKeys,
+    'a2': allKeys.filter(key => words[key].level.includes('A2')),
+    // 'Adverb': allKeys.filter(key => words[key].categoty.includes('adverb'))
+  }
+
+  console.log(testStartArrays['A2'])
+
+
   function startTest(t){
     console.log('start creating test array');
+    console.log(t)
 
-    const checkingWords = generareRandomList(Object.keys(words), storeTests[t].wordsCounter)
+    const checkingWords = generareRandomList(testStartArrays[t] ,storeTests[t].wordsCounter)
     const testArr = generateTestObject(checkingWords);
     console.log(testArr)
     resetQuestionNumber();
