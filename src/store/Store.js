@@ -10,14 +10,14 @@ const useTestStore = create((set) => ({
       wordsCounter: 5,
       time: 2
     },
-    // "50": {
-    //   url: "50",
-    //   img: 'star',
-    //   title: "50",
-    //   subtitle: "Случайные 50 слов",
-    //   wordsCounter: 50,
-    //   time: 2
-    // },
+    "50": {
+      url: "50",
+      img: 'star',
+      title: "50",
+      subtitle: "Случайные 50 слов",
+      wordsCounter: 50,
+      time: 2
+    },
     // "100": {
     //   url: "100",
     //   img: 'star',

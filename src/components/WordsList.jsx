@@ -64,14 +64,16 @@ return (
   <>
     <Breadcrumbs/>
     {/* <WordsListNav/> */}
-    <Filters
+    <div style={{display: 'flex', alignItems: 'start', padding: '12px 24px', flexDirection: 'column', gap: '12px'}}>
+      <h5>Список слов</h5>
+      <Filters
         items={filterItems} 
         onSelect={filterSelected} 
         selected={selectedFilter}
       />
+    </div>
     <div className='word-list'>
-      <div style={{display: 'flex', alignItems: 'center'}}><h5>Список слов</h5></div>
-      <WordsListNav/>
+      {/* <WordsListNav/> */}
       <div className='word-list-list'>
         {wordsList}
       </div>

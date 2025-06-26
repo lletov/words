@@ -92,6 +92,7 @@ h2 {
   font-size: 20px;
   font-weight: 500;
   color: var(--black);
+  text-align: end;
 }
 
 h3 {
@@ -523,7 +524,7 @@ h5 {
 }
 
 .word-list{
-  padding: 12px;
+  padding: 12px 24px;
   gap: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;

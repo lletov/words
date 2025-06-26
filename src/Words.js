@@ -194,7 +194,7 @@ const words = {
         level: ['A1'],
         category: ['adverb']
     },
-    'American': {
+    'american': {
         translation: ['американский'],
         level: ['A2'],
         category: ['adjective']
