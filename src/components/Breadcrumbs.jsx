@@ -10,13 +10,17 @@ export const Breadcrumbs = () => {
 
     const pathObj = {
       'tests': 'тесты',
+      '5': 'тест 5',
       '50': 'тест 50',
       '100': 'тест 100',
-      'wordslist': 'список слов'
+      'wordslist': 'список слов',
+      'a2': 'тест a2',
+      'adverb': 'тест adverb',
     }
   
     return (
       <div className="breadcrumbs">
+        {/* <button>back</button> */}
         <Link 
             to="/"
             style={{ textDecoration: 'none' }}
