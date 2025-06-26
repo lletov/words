@@ -18,14 +18,14 @@ const useTestStore = create((set) => ({
       wordsCounter: 5,
       time: 2
     },
-    // "Adverb": {
-    //   url: "adverb",
-    //   img: 'star',
-    //   title: "Adverb",
-    //   subtitle: "Случайные 5 наречий",
-    //   wordsCounter: 5,
-    //   time: 2
-    // },
+    "adverb": {
+      url: "adverb",
+      img: 'star',
+      title: "Adverb",
+      subtitle: "Случайные 5 наречий",
+      wordsCounter: 5,
+      time: 2
+    },
     // "50": {
     //   url: "50",
     //   img: 'star',

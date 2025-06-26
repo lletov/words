@@ -25,10 +25,8 @@ const allKeys = Object.keys(words);
   const testStartArrays = {
     '5': allKeys,
     'a2': allKeys.filter(key => words[key].level.includes('A2')),
-    // 'Adverb': allKeys.filter(key => words[key].categoty.includes('adverb'))
+    'adverb': allKeys.filter(key => words[key].category.includes('adverb'))
   }
-
-  console.log(testStartArrays['A2'])
 
 
   function startTest(t){
