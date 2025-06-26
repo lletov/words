@@ -38,6 +38,7 @@ export const Test = () => {
   const setStartTime = useTestStore((state) => state.setStartTime);
 
   const result = useTestStore((state) => state.result);
+  const statisticOn = useTestStore((state) => state.statisticOn);
 
   const [testProgress, setTestProgress] = useState(1)
 
@@ -59,7 +60,7 @@ export const Test = () => {
     increaseQuestionNumber();
     setTestProgress(questionNumber + 2);
     addResult(ans)
-    setWordStatistic(ans.word, ans.status)
+    setWordStatistic(ans.word, ans.status, statisticOn)
 
     if (questionNumber + 1 === testWordsNumber) {
       setEndTime()
