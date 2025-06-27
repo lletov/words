@@ -1,12 +1,14 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import arrow from './../assets/arrow-right.svg'
+import { ChevronLeft } from 'lucide-react';
 
 export const Breadcrumbs = () => {
     const location = useLocation();
     const pathnames = location.pathname.split("/").filter((x) => x);
     let breadcrumbPath = "";
+    const navigate = useNavigate();
 
     const pathObj = {
       'tests': 'тесты',
@@ -20,7 +22,14 @@ export const Breadcrumbs = () => {
   
     return (
       <div className="breadcrumbs">
-        {/* <button>back</button> */}
+        <Link style={{marginRight: '12px'}}>
+          <button 
+            className="btn-m" style={{height: '40px', width: '40px', padding: '0px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+            onClick={() => navigate(-1)}
+          >
+              <ChevronLeft className='size-5'/>
+          </button>
+        </Link>
         <Link 
             to="/"
             style={{ textDecoration: 'none' }}
