@@ -13,6 +13,7 @@ export const WordsList = () => {
   
   const [selectedFilter, setSelectedFilter] = useState('All')
   const [filteredWordList, setFilteredWordList] = useState(words)
+  const [searchQuery, setSearchQuery] = useState('')
 
   const filterItems = [
     'All',
@@ -34,7 +35,7 @@ export const WordsList = () => {
 }
   
   let currentLetter = ''
-  const wordsList = Object.keys(filteredWordList).map(w => {
+  const wordsList = Object.keys(filteredWordList).filter(w => w.toLowerCase().includes(searchQuery.toLowerCase())).map(w => {
     if (w.split('')[0] !== currentLetter) {
       currentLetter = w.split('')[0]
       return <>
@@ -66,6 +67,19 @@ return (
     {/* <WordsListNav/> */}
     <div style={{display: 'flex', alignItems: 'start', padding: '12px 24px', flexDirection: 'column', gap: '12px'}}>
       <h5>Список слов</h5>
+      <input style={{
+        borderWidth: '1px',
+        borderStyle: 'solid',
+        borderColor: '#222222',
+        borderRadius: '40px',
+        height: '40px',
+        width: '100%',
+        paddingLeft: '16px',
+        fontSize: '14px',
+      }}
+      placeholder='Поиск слов'
+      onChange={e => setSearchQuery(e.target.value)}
+      />
       <Filters
         items={filterItems} 
         onSelect={filterSelected} 
