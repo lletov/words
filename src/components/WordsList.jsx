@@ -5,6 +5,7 @@ import { WordsListNav } from './WordsListNav'
 import { getWordStatistic } from '../utils/LocalStorageUtils'
 import useTestStore from './../store/Store';
 import Filters from './Filters'
+import Input from './Input'
 
 export const WordsList = () => {
 
@@ -14,6 +15,13 @@ export const WordsList = () => {
   const [selectedFilter, setSelectedFilter] = useState('All')
   const [filteredWordList, setFilteredWordList] = useState(words)
   const [searchQuery, setSearchQuery] = useState('')
+
+  function handleInput(text) {
+    setSearchQuery(text);
+  }
+  function clearInput() {
+    setSearchQuery('')
+  }
 
   const filterItems = [
     'All',
@@ -67,18 +75,11 @@ return (
     {/* <WordsListNav/> */}
     <div style={{display: 'flex', alignItems: 'start', padding: '12px 24px', flexDirection: 'column', gap: '12px'}}>
       <h5>Список слов</h5>
-      <input style={{
-        borderWidth: '1px',
-        borderStyle: 'solid',
-        borderColor: '#222222',
-        borderRadius: '40px',
-        height: '40px',
-        width: '100%',
-        paddingLeft: '16px',
-        fontSize: '14px',
-      }}
-      placeholder='Поиск слов'
-      onChange={e => setSearchQuery(e.target.value)}
+      <Input
+        maxLength={80} 
+        text={searchQuery} 
+        handleInput={handleInput} 
+        clearInput={clearInput}
       />
       <Filters
         items={filterItems} 
