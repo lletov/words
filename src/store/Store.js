@@ -8,32 +8,32 @@ const useTestStore = create((set) => ({
       title: "5",
       subtitle: "Случайные 5 слов",
       wordsCounter: 5,
-      time: 2
+      time: 1
     },
     "a2": {
       url: "a2",
       img: 'star',
       title: "A2",
-      subtitle: "Случайные 5 слов A2",
+      subtitle: "Случайные 5 слов уровня A2",
       wordsCounter: 5,
-      time: 2
+      time: 1
     },
     "adverb": {
       url: "adverb",
       img: 'star',
       title: "Adverb",
-      subtitle: "Случайные 5 наречий",
+      subtitle: "5 случайных наречий",
       wordsCounter: 5,
-      time: 2
+      time: 1
     },
-    // "50": {
-    //   url: "50",
-    //   img: 'star',
-    //   title: "50",
-    //   subtitle: "Случайные 50 слов",
-    //   wordsCounter: 50,
-    //   time: 2
-    // },
+    "50": {
+      url: "50",
+      img: 'star',
+      title: "50",
+      subtitle: "Случайные 50 слов",
+      wordsCounter: 50,
+      time: 3
+    },
     // "100": {
     //   url: "100",
     //   img: 'star',
