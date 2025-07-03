@@ -26,8 +26,11 @@ export const WordsList = () => {
   const filterItems = [
     'All',
     'A1',
+    'A2',
     'B1',
-    'C1'
+    'A2',
+    'C1',
+    'C2'
   ]
 
   function filterSelected(selected) {
