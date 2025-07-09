@@ -25,6 +25,8 @@ export const Tests = () => {
 
   const testStartArrays = {
     '5': allKeys,
+    '50': allKeys,
+    '100': allKeys,
     'a2': allKeys.filter(key => words[key].level.includes('A2')),
     'adverb': allKeys.filter(key => words[key].category.includes('adverb'))
   }

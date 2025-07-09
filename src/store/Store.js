@@ -8,7 +8,8 @@ const useTestStore = create((set) => ({
       title: "5",
       subtitle: "Случайные 5 слов",
       wordsCounter: 5,
-      time: 1
+      time: 1,
+      category: ['adverb']
     },
     "a2": {
       url: "a2",
@@ -16,7 +17,8 @@ const useTestStore = create((set) => ({
       title: "A2",
       subtitle: "Случайные 5 слов уровня A2",
       wordsCounter: 5,
-      time: 1
+      time: 1,
+      category: ['adverb']
     },
     "adverb": {
       url: "adverb",
@@ -24,7 +26,8 @@ const useTestStore = create((set) => ({
       title: "Adverb",
       subtitle: "5 случайных наречий",
       wordsCounter: 5,
-      time: 1
+      time: 1,
+      category: ['adverb']
     },
     "50": {
       url: "50",
@@ -32,16 +35,18 @@ const useTestStore = create((set) => ({
       title: "50",
       subtitle: "Случайные 50 слов",
       wordsCounter: 50,
-      time: 3
+      time: 3,
+      category: ['adverb']
     },
-    // "100": {
-    //   url: "100",
-    //   img: 'star',
-    //   title: "100",
-    //   subtitle: "Случайные 100 слов",
-    //   wordsCounter: 100,
-    //   time: 4
-    // }
+    "100": {
+      url: "100",
+      img: 'star',
+      title: "100",
+      subtitle: "Случайные 100 слов",
+      wordsCounter: 100,
+      time: 4,
+      category: ['adverb']
+    }
   },
   testArray: null,
   questionNumber: 0,
