@@ -13,6 +13,7 @@ import {generareRandomList, generateTestObject} from '../utils/TestSetupUtils';
 import { Accordion } from './Accordion';
 import { WordStat } from './WordStat';
 import { Breadcrumbs } from './Breadcrumbs';
+import { setWordStatistic } from '../utils/LocalStorageUtils';
 
 export const Test = () => {
 
@@ -37,10 +38,16 @@ export const Test = () => {
   const setStartTime = useTestStore((state) => state.setStartTime);
 
   const result = useTestStore((state) => state.result);
+  const statisticOn = useTestStore((state) => state.statisticOn);
 
   const [testProgress, setTestProgress] = useState(1)
 
+  if (!localStorage.getItem('statistic')) {
+      localStorage.setItem('statistic', JSON.stringify({}))
+  }
+
   function checkAnswer(answer){
+
     let status;
     if (answer === testArray[questionNumber].variants[testArray[questionNumber].correctIndex]) {
       console.log('true');
@@ -53,6 +60,7 @@ export const Test = () => {
     increaseQuestionNumber();
     setTestProgress(questionNumber + 2);
     addResult(ans)
+    setWordStatistic(ans.word, ans.status, statisticOn)
 
     if (questionNumber + 1 === testWordsNumber) {
       setEndTime()
@@ -79,10 +87,10 @@ export const Test = () => {
 
       const variants = testArray[questionNumber].variants.map((v) => 
         <button 
-      key={v.toString()}
+          key={v.toString()}
           className='btn-m test-btn' 
           onClick={(e)=> {checkAnswer(v)}}>
-            {words[v]}
+            {words[v].translation.join(', ')}
         </button>
       )
       return (
@@ -150,7 +158,7 @@ export const Test = () => {
           />
           <div className='group'>
             <button onClick={(e) => {resetTest(storeTests[URLprefix])}} className='btn-m'>пройти еще раз</button>
-            <Link to='/'><button className='btn-m accent'>на главную страницу</button></Link>
+            <Link to='/'><button className='btn-m accent w-full'>на главную страницу</button></Link>
           </div>
         </div>
         </>

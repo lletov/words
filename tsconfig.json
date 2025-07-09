@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "react-jsx", // or "react" if using older React versions
+    "allowJs": true, 
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/components/*"],
+      "@/*": ["src/*"],
+    }
+  },
+  "include": ["src"],
+}

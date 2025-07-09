@@ -1,411 +1,614 @@
 const words = {
-    able: 'способный',
-    about: 'о',
-    above: 'выше',
-    accept: 'принять',
-    across: 'через',
-    act: 'действовать',
-    actually: 'на самом деле',
-    add: 'добавлять',
-    admit: 'признавать',
-    afraid: 'испуганный',
-    after: 'после',
-    afternoon: 'полдень',
-    again: 'снова',
-    against: 'против',
-    age: 'возраст',
-    ago: 'назад',
-    agree: 'соглашаться',
-    ahead: 'предстоящий',
-    air: 'воздух',
-    all: 'все',
-    allow: 'позволять',
-    almost: 'почти',
-    alone: 'один',
-    along: 'вдоль',
-    already: 'уже',
-    alright: 'хорошо',
-    also: 'также',
-    although: 'хотя',
-    always: 'всегда',
-    amaze: 'удивлять',
-    anger: 'злость',
-    angry: 'злой',
-    animal: 'животное',
-    annoy: 'раздражать',
-    another: 'другой',
-    answer: 'отвечать',
-    any: 'любой',
-    anymore: 'больше',
-    anyone: 'любой',
-    anything: 'что-либо',
-    anyway: 'в любом случае',
-    apartment: 'квартира',
-    apparently: 'видимо',
-    appear: 'появляться',
-    approach: 'подход',
-    area: 'область',
-    arm: 'рука',
-    around: 'вокруг',
-    arrive: 'приезжать',
-    ask: 'просить',
-    asleep: 'спящий',
-    attack: 'атаковать',
-    attempt: 'пытаться',
-    attention: 'внимание',
-    aunt: 'тетя',
-    avoid: 'избегать',
-    away: 'далеко',
-    baby: 'ребенок',
-    back: 'назад',
-    bad: 'плохой',
-    bag: 'сумка',
-    ball: 'мяч',
-    band: 'группа',
-    bar: 'бар',
-    barely: 'едва',
-    bathroom: 'ванная комната',
-    beat: 'бить',
-    beautiful: 'красивый',
-    became: 'стал',
-    because: 'потому что',
-    become: 'становиться',
-    bed: 'кровать',
-    bedroom: 'спальня',
-    before: 'до',
-    begin: 'начинать',
-    behind: 'позади',
-    believe: 'верить',
-    bell: 'колокол',
-    beside: 'рядом',
-    best: 'лучший',
-    better: 'лучше',
-    between: 'между',
-    big: 'большой',
-    bit: 'кусочек',
-    bite: 'кусать',
-    black: 'черный',
-    blink: 'моргать',
-    block: 'блокировать',
-    blonde: 'блондинка',
-    blood: 'кровь',
-    blue: 'синий',
-    blush: 'краснеть',
-    body: 'тело',
-    book: 'книга',
-    bore: 'бурить',
-    both: 'оба',
-    bother: 'беспокоить',
-    bottle: 'бутылка',
-    bottom: 'нижний',
-    box: 'коробка',
-    boy: 'мальчик',
-    boyfriend: 'парень',
-    brain: 'мозг',
-    break: 'перерыв',
-    breakfast: 'завтрак',
-    breath: 'дыхание',
-    bright: 'яркий',
-    bring: 'приносить',
-    broke: 'сломанный',
-    brother: 'брат',
-    brown: 'коричневый',
-    brush: 'щетка',
-    build: 'строить',
-    burn: 'гореть',
-    burst: 'лопаться',
-    bus: 'автобус',
-    business: 'бизнес',
-    busy: 'занятый',
-    but: 'но',
-    buy: 'купить',
-    call: "вызов",
-    calm: "спокойствие",
-    came: "пришел",
-    can: "может",
-    "can't": "не мочь",
-    car: "машина",
-    card: "карта",
-    care: "забота",
-    carefully: "осторожно",
-    carry: "нести",
-    case: "случай",
-    cat: "кот",
-    catch: "ловить",
-    caught: "пойманный",
-    cause: "причина",
-    cell: "клетка",
-    chair: "стул",
-    chance: "шанс",
-    change: "изменять",
-    chase: "гнаться",
-    check: "проверять",
-    cheek: "щека",
-    chest: "грудь",
-    child: "ребенок",
-    children: "дети",
-    chuckle: "смеяться",
-    city: "город",
-    class: "сорт",
-    clean: "чистый",
-    clear: "прозрачный",
-    climb: "взбираться",
-    close: "закрывать",
-    clothes: "одежда",
-    coffee: "кофе",
-    cold:"холодный",
-    college: "колледж",
-    color: "цвет",
-    come: "приходить",
-    comment: "комментарий",
-    complete: "полный",
-    completely: "полностью",
-    computer: "компьютер",
-    concern: "беспокойство",
-    confuse: "путать",
-    consider: "учитывать",
-    continue: "продолжать",
-    control: "контроль",
-    conversation: "беседа",
-    cool: "прохладный",
-    corner: "угол",
-    couch: "диван",
-    could: "мог",
-    "couldn't": "не мог",
-    counter: "прилавок",
-    couple: "пара",
-    course: "курс",
-    cover: "крышка",
-    crack: "трескаться",
-    crazy: "сумасшедший",
-    cross: "крест",
-    crowd: "толпа",
-    cry: "плакать",
-    cup: "чашка",
-    cut: "резать",
-    cute: "милый",
-    dad: "папа",
-    damn: "проклятие",
-    dance: "танцевать",
-    dark: "темный",
-    date: "дата",
-    daughter: "дочь",
-    day: "день",
-    dead: "мертвый",
-    deal: "иметь дело",
-    dear: "дорогой",
-    death: "смерть",
-    decide: "решать",
-    deep: "глубокий",
-    definitely: "определенно",
-    desk: "рабочий стол",
-    did: "делал",
-    "didn't": "не сделал",
-    die: "умереть",
-    different: "другой",
-    dinner: "ужин",
-    direction: "направление",
-    disappear: "пропадать",
-    do: "делать",
-    doctor: "врач",
-    does: "делает",
-    "doesn't": "не делает",
-    dog: "собака",
-    "don't": "не",
-    done: "сделанный",
-    door: "дверь",
-    doubt: "сомневаться",
-    down: "вниз",
-    drag: "тащить",
-    draw: "рисовать",
-    dream: "мечтать",
-    dress: "одеваться",
-    drink: "напиток",
-    drive: "водить машину",
-    drop: "уронить",
-    drove: "ехал",
-    dry: "сухой",
-    during: "в течение",
-    each: "каждый",
-    ear: "ухо",
-    early: "рано",
-    easily: "легко",
-    easy: "легкий",
-    eat: "есть",
-    edge: "край",
-    either: "или",
-    else: "еще",
-    empty: "пустой",
-    end: "конец",
-    enjoy: "наслаждаться",
-    enough: "достаточно",
-    enter: "входить",
-    entire: "весь",
-    escape: "побег",
-    especially: "особенно",
-    even: "даже",
-    evening: "вечер",
-    eventually: "в конце концов",
-    ever: "всегда",
-    every: "каждый",
-    everyone: "каждый",
-    everything: "все",
-    exactly: "точно",
-    except: "кроме",
-    excite: "возбуждать",
-    exclaim: "восклицать",
-    excuse: "извинение",
-    expect: "ожидать",
-    explain: "объяснять",
-    expression: "выражение",
-    eye: "глаз",
-    eyebrow: "бровь",
-    face: "лицо",
-    fact: "факт",
-    fall: "падать",
-    family: "семья",
-    far: "далеко",
-    fast: "быстрый",
-    father: "отец",
-    fault: "вина",
-    favorite: "любимый",
-    fear: "страх",
-    feel: "чувствовать",
-    feet: "ноги",
-    fell: "упал",
-    few: "немного",
-    field: "поле",
-    fight: "драться",
-    figure: "фигура",
-    fill: "наполнять",
-    finally: "окончательно",
-    find: "находить",
-    fine: "отлично",
-    finger: "палец",
-    finish: "заканчивать",
-    fire: "огонь",
-    first: "первый",
-    fit: "соответствовать",
-    five: "пять",
-    fix: "исправить",
-    flash: "вспышка",
-    flip: "подбросить",
-    floor: "пол",
-    fly: "летать",
-    focus: "фокус",
-    follow: "следовать",
-    food: "еда",
-    foot: "ступня",
-    for: "для",
-    force: "сила",
-    forget: "забывать",
-    form: "форма",
-    forward: "вперед",
-    found: "найденный",
-    four: "четыре",
-    free: "бесплатно",
-    friend: "друг",
-    from: "от",
-    front: "передний",
-    frown: "хмуриться",
-    full: "полный",
-    fun: "веселье",
-    funny: "забавный",
-    further: "дальше",
-    game: "игра",
-    gasp: "вздохнуть",
-    gave: "отдал",
-    gaze: "взгляд",
-    gently: "нежно",
-    get: "получать",
-    giggle: "хихикать",
-    girl: "девочка",
-    girlfriend: "подруга",
-    give: "давать",
-    given: "данный",
-    glad: "радостный",
-    glance: "взглянуть мельком",
-    glare: "блики",
-    glass: "стекло",
-    go: "идти",
-    god: "Бог",
-    gone: "ушел",
-    gonna: "собираюсь",
-    good: "хороший",
-    got: "получил",
-    gotten: "получил",
-    grab: "схватить",
-    great: "большой",
-    green: "зеленый",
-    greet: "приветствовать",
-    grey: "серый",
-    grin: "ухмылка",
-    grip: "схватить",
-    groan: "стон",
-    ground: "земля",
-    group: "группа",
-    grow: "расти",
-    guard: "сторожить",
-    guess: "предполагать",
-    gun: "пистолет",
-    guy: "парень",
-    had: "имел",
-    "hadn't": "не имел",
-    hair: "волосы",
-    half: "половина",
-    hall: "зал",
-    hallway: "коридор",
-    hand: "рука",
-    handle: "ручка",
-    hang: "вешать",
-    happen: "случаться",
-    happy: "счастливый",
-    hard: "жесткий",
-    has: "имеет",
-    hate: "ненавидеть",
-    have: "иметь",
-    "haven't": "нет",
-    he: "он",
-    "he'd": "он бы",
-    he: "он",
-    head: "голова",
-    hear: "слышать",
-    heard: "слышал",
-    heart: "сердце",
-    heavy: "тяжелый",
-    held: "держал",
-    hell: "ад",
-    hello: "привет",
-    help: "помощь",
-    her: "ее",
-    here: "здесь",
-    herself: "себя",
-    hey: "привет",
-    hi: "привет",
-    hide: "скрывать",
-    high: "высокий",
-    him: "ему",
-    himself: "сам",
-    his: "его",
-    hit: "ударять",
-    hold: "держать",
-    home: "дом",
-    hope: "надеяться",
-    horse: "лошадь",
-    hospital: "больница",
-    hot: "горячий",
-    hour: "час",
-    house: "дом",
-    how: "как",
-    however: "однако",
-    hug: "обнимать",
-    huge: "огромный",
-    huh: "хм",
-    human: "человек",
-    hundred: "сто",
-    hung: "висит",
-    hurry: "торопиться",
-    hurt: "повредить",
-}
+    'a': {
+        translation: ['один', 'неопределённый артикль'],
+        level: ['A1'],
+        category: ['grammar']
+    },
+    'ability': {
+        translation: ['способность'],
+        level: ['A2'],
+        category: ['abstract']
+    },
+    'able': {
+        translation: ['способный'],
+        level: ['A2'],
+        category: ['adjective']
+    },
+    'about': {
+        translation: ['о', 'об'],
+        level: ['A1'],
+        category: ['preposition']
+    },
+    'above': {
+        translation: ['выше', 'над'],
+        level: ['A2'],
+        category: ['preposition']
+    },
+    'accept': {
+        translation: ['принимать'],
+        level: ['A2'],
+        category: ['verb']
+    },
+    'according': {
+        translation: ['согласно'],
+        level: ['B1'],
+        category: ['adverb']
+    },
+    'account': {
+        translation: ['счёт', 'учёт'],
+        level: ['B1'],
+        category: ['finance']
+    },
+    'across': {
+        translation: ['через', 'по ту сторону'],
+        level: ['A2'],
+        category: ['preposition']
+    },
+        'act': {
+        translation: ['действовать', 'акт'],
+        level: ['A2'],
+        category: ['verb']
+    },
+    'action': {
+        translation: ['действие'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'activity': {
+        translation: ['деятельность'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'actually': {
+        translation: ['на самом деле'],
+        level: ['B1'],
+        category: ['adverb']
+    },
+    'add': {
+        translation: ['добавлять'],
+        level: ['A1'],
+        category: ['verb']
+    },
+    'address': {
+        translation: ['адрес'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'administration': {
+        translation: ['администрация'],
+        level: ['B2'],
+        category: ['noun']
+    },
+    'admit': {
+        translation: ['признавать'],
+        level: ['B1'],
+        category: ['verb']
+    },
+    'adult': {
+        translation: ['взрослый'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'affect': {
+        translation: ['влиять'],
+        level: ['B1'],
+        category: ['verb']
+    },
+    'after': {
+        translation: ['после'],
+        level: ['A1'],
+        category: ['preposition']
+    },
+    'again': {
+        translation: ['снова'],
+        level: ['A1'],
+        category: ['adverb']
+    },
+    'against': {
+        translation: ['против'],
+        level: ['A2'],
+        category: ['preposition']
+    },
+    'age': {
+        translation: ['возраст'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'agency': {
+        translation: ['агентство'],
+        level: ['B1'],
+        category: ['noun']
+    },
+    'agent': {
+        translation: ['агент'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'ago': {
+        translation: ['назад'],
+        level: ['A2'],
+        category: ['adverb']
+    },
+    'agree': {
+        translation: ['соглашаться'],
+        level: ['A2'],
+        category: ['verb']
+    },
+    'agreement': {
+        translation: ['соглашение'],
+        level: ['B1'],
+        category: ['noun']
+    },
+    'ahead': {
+        translation: ['впереди'],
+        level: ['B1'],
+        category: ['adverb']
+    },
+    'air': {
+        translation: ['воздух'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'all': {
+        translation: ['все'],
+        level: ['A1'],
+        category: ['pronoun']
+    },
+    'allow': {
+        translation: ['разрешать'],
+        level: ['A2'],
+        category: ['verb']
+    },
+    'almost': {
+        translation: ['почти'],
+        level: ['A2'],
+        category: ['adverb']
+    },
+    'alone': {
+        translation: ['один', 'в одиночестве'],
+        level: ['A2'],
+        category: ['adjective']
+    },
+    'along': {
+        translation: ['вдоль', 'по'],
+        level: ['A2'],
+        category: ['preposition']
+    },
+    'already': {
+        translation: ['уже'],
+        level: ['A1'],
+        category: ['adverb']
+    },
+    'also': {
+        translation: ['также'],
+        level: ['A1'],
+        category: ['adverb']
+    },
+    'although': {
+        translation: ['хотя'],
+        level: ['B1'],
+        category: ['conjunction']
+    },
+    'always': {
+        translation: ['всегда'],
+        level: ['A1'],
+        category: ['adverb']
+    },
+    'american': {
+        translation: ['американский'],
+        level: ['A2'],
+        category: ['adjective']
+    },
+    'among': {
+        translation: ['среди'],
+        level: ['A2'],
+        category: ['preposition']
+    },
+    'amount': {
+        translation: ['количество'],
+        level: ['B1'],
+        category: ['noun']
+    },
+    'analysis': {
+        translation: ['анализ'],
+        level: ['B2'],
+        category: ['noun']
+    },
+        'and': {
+        translation: ['и'],
+        level: ['A1'],
+        category: ['conjunction']
+    },
+    'animal': {
+        translation: ['животное'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'another': {
+        translation: ['другой'],
+        level: ['A2'],
+        category: ['pronoun']
+    },
+    'answer': {
+        translation: ['ответ'],
+        level: ['A1'],
+        category: ['noun', 'verb']
+    },
+    'any': {
+        translation: ['любой'],
+        level: ['A2'],
+        category: ['determiner']
+    },
+    'anyone': {
+        translation: ['кто угодно'],
+        level: ['A2'],
+        category: ['pronoun']
+    },
+    'anything': {
+        translation: ['что угодно'],
+        level: ['A2'],
+        category: ['pronoun']
+    },
+    'appear': {
+        translation: ['появляться'],
+        level: ['B1'],
+        category: ['verb']
+    },
+    'apply': {
+        translation: ['применять', 'подать заявку'],
+        level: ['B1'],
+        category: ['verb']
+    },
+    'approach': {
+        translation: ['подход', 'подходить'],
+        level: ['B1'],
+        category: ['noun', 'verb']
+    },
+    'area': {
+        translation: ['область', 'район'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'argue': {
+        translation: ['спорить'],
+        level: ['B1'],
+        category: ['verb']
+    },
+    'arm': {
+        translation: ['рука', 'оружие'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'around': {
+        translation: ['вокруг'],
+        level: ['A2'],
+        category: ['preposition', 'adverb']
+    },
+    'arrive': {
+        translation: ['прибывать'],
+        level: ['A2'],
+        category: ['verb']
+    },
+    'art': {
+        translation: ['искусство'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'article': {
+        translation: ['статья', 'артикль'],
+        level: ['B1'],
+        category: ['noun']
+    },
+    'artist': {
+        translation: ['художник'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'as': {
+        translation: ['как', 'в качестве'],
+        level: ['A1'],
+        category: ['conjunction', 'preposition']
+    },
+    'ask': {
+        translation: ['спрашивать'],
+        level: ['A1'],
+        category: ['verb']
+    },
+    'assume': {
+        translation: ['предполагать'],
+        level: ['B1'],
+        category: ['verb']
+    },
+    'at': {
+        translation: ['в', 'на'],
+        level: ['A1'],
+        category: ['preposition']
+    },
+    'attack': {
+        translation: ['атака', 'атаковать'],
+        level: ['B1'],
+        category: ['noun', 'verb']
+    },
+    'attention': {
+        translation: ['внимание'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'attorney': {
+        translation: ['адвокат'],
+        level: ['B2'],
+        category: ['noun']
+    },
+    'audience': {
+        translation: ['аудитория'],
+        level: ['B1'],
+        category: ['noun']
+    },
+    'author': {
+        translation: ['автор'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'authority': {
+        translation: ['власть', 'авторитет'],
+        level: ['B2'],
+        category: ['noun']
+    },
+    'available': {
+        translation: ['доступный'],
+        level: ['B1'],
+        category: ['adjective']
+    },
+    'avoid': {
+        translation: ['избегать'],
+        level: ['B1'],
+        category: ['verb']
+    },
+    'away': {
+        translation: ['далеко', 'вдали'],
+        level: ['A2'],
+        category: ['adverb']
+    },
+    'baby': {
+        translation: ['младенец'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'back': {
+        translation: ['назад', 'спина'],
+        level: ['A1'],
+        category: ['adverb', 'noun']
+    },
+    'bad': {
+        translation: ['плохой'],
+        level: ['A1'],
+        category: ['adjective']
+    },
+    'bag': {
+        translation: ['сумка'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'ball': {
+        translation: ['мяч'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'bank': {
+        translation: ['банк'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'bar': {
+        translation: ['бар', 'перекладина'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'base': {
+        translation: ['основа', 'база'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'be': {
+        translation: ['быть'],
+        level: ['A1'],
+        category: ['verb']
+    },
+    'beat': {
+        translation: ['бить', 'удар'],
+        level: ['B1'],
+        category: ['verb', 'noun']
+    },
+    'beautiful': {
+        translation: ['красивый'],
+        level: ['A2'],
+        category: ['adjective']
+    },
+    'because': {
+        translation: ['потому что'],
+        level: ['A2'],
+        category: ['conjunction']
+    },
+    'become': {
+        translation: ['становиться'],
+        level: ['A2'],
+        category: ['verb']
+    },
+    'bed': {
+        translation: ['кровать'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'before': {
+        translation: ['до', 'перед'],
+        level: ['A1'],
+        category: ['preposition']
+    },
+    'begin': {
+        translation: ['начинать'],
+        level: ['A1'],
+        category: ['verb']
+    },
+    'behavior': {
+        translation: ['поведение'],
+        level: ['B1'],
+        category: ['noun']
+    },
+    'behind': {
+        translation: ['за', 'позади'],
+        level: ['A2'],
+        category: ['preposition']
+    },
+    'believe': {
+        translation: ['верить'],
+        level: ['A2'],
+        category: ['verb']
+    },
+    'benefit': {
+        translation: ['выгода', 'польза'],
+        level: ['B1'],
+        category: ['noun', 'verb']
+    },
+    'best': {
+        translation: ['лучший'],
+        level: ['A2'],
+        category: ['adjective']
+    },
+    'better': {
+        translation: ['лучше'],
+        level: ['A2'],
+        category: ['adverb']
+    },
+    'between': {
+        translation: ['между'],
+        level: ['A2'],
+        category: ['preposition']
+    },
+    'beyond': {
+        translation: ['за', 'по ту сторону'],
+        level: ['B1'],
+        category: ['preposition']
+    },
+    'big': {
+        translation: ['большой'],
+        level: ['A1'],
+        category: ['adjective']
+    },
+    'bill': {
+        translation: ['счёт', 'билл'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'billion': {
+        translation: ['миллиард'],
+        level: ['B1'],
+        category: ['noun']
+    },
+    'bit': {
+        translation: ['кусочек', 'немного'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'black': {
+        translation: ['чёрный'],
+        level: ['A1'],
+        category: ['adjective']
+    },
+    'blood': {
+        translation: ['кровь'],
+        level: ['B1'],
+        category: ['noun']
+    },
+    'blue': {
+        translation: ['синий'],
+        level: ['A1'],
+        category: ['adjective']
+    },
+    'board': {
+        translation: ['доска', 'борд'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'body': {
+        translation: ['тело'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'book': {
+        translation: ['книга'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'born': {
+        translation: ['рожденный'],
+        level: ['B1'],
+        category: ['verb', 'adjective']
+    },
+    'both': {
+        translation: ['оба'],
+        level: ['A2'],
+        category: ['pronoun']
+    },
+    'box': {
+        translation: ['коробка'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'boy': {
+        translation: ['мальчик'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'break': {
+        translation: ['ломать', 'перерыв'],
+        level: ['A2'],
+        category: ['verb', 'noun']
+    },
+    'bring': {
+        translation: ['приносить'],
+        level: ['A2'],
+        category: ['verb']
+    },
+    'brother': {
+        translation: ['брат'],
+        level: ['A1'],
+        category: ['noun']
+    },
+    'budget': {
+        translation: ['бюджет'],
+        level: ['B1'],
+        category: ['noun']
+    },
+    'build': {
+        translation: ['строить'],
+        level: ['A2'],
+        category: ['verb']
+    },
+    'building': {
+        translation: ['здание'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'business': {
+        translation: ['бизнес'],
+        level: ['A2'],
+        category: ['noun']
+    },
+    'but': {
+        translation: ['но'],
+        level: ['A1'],
+        category: ['conjunction']
+    },
+    'buy': {
+        translation: ['покупать'],
+        level: ['A1'],
+        category: ['verb']
+    },
+    'by': {
+        translation: ['у', 'по', 'к'],
+        level: ['A1'],
+        category: ['preposition']
+    }
+};
 
 export default words

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import arrow from './../assets/arrow-right.svg'
-import banner from './../assets/banner.png'
+import banner from './../assets/banner.svg'
 
 export const Banner = () => {
     const raw = ""
@@ -23,7 +23,7 @@ export const Banner = () => {
         <img src={banner}/>
         <div className='group'>
             <h4>WORDS - онлайн тестирование на знание английского</h4>
-            <p>проверьте свои знания языка при помощи онлайн теста, результат покажем сразу</p>
+            <p style={{color: '#3676e2'}}>проверьте свои знания языка при помощи онлайн теста, результат покажем сразу</p>
         </div>
         <Link to='/tests'><button className="btn-m accent">пройти тест</button></Link>
         <div className='banner-more-btn'>
