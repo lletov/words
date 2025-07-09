@@ -181,7 +181,7 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 2px;
   /* width: 100%; */
   transform: translate(-50%, 0%);
   animation: more-animate 4s infinite ease-in-out 4s;
@@ -223,13 +223,13 @@ h5 {
 }
 
 .btn-m {
-  height: 56px;
+  height: 40px;
   /* width: 100%; */
   padding: 0px 20px;
   border: solid 1px var(--accent-color);
   border-radius: 30px;
   color: var(--accent-color);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   background-color: transparent;
 }
@@ -249,6 +249,8 @@ h5 {
   color: var(--black);
   border: none;
   width: 100%;
+  height: 56px;
+  font-size: 20px;
 }
 
 .btn-s {
