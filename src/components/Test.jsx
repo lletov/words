@@ -9,7 +9,7 @@ import done from './../assets/done.png'
 import stat from './../assets/stack.png'
 import arrow from './../assets/arrow-right.svg'
 import { Link } from 'react-router-dom';
-import {generareRandomList, generateTestObject} from '../utils/TestSetupUtils';
+import { generareRandomList, generateTestObject } from '../utils/TestSetupUtils';
 import { Accordion } from './Accordion';
 import { WordStat } from './WordStat';
 import { Breadcrumbs } from './Breadcrumbs';
@@ -43,20 +43,20 @@ export const Test = () => {
   const [testProgress, setTestProgress] = useState(1)
 
   if (!localStorage.getItem('statistic')) {
-      localStorage.setItem('statistic', JSON.stringify({}))
+    localStorage.setItem('statistic', JSON.stringify({}))
   }
 
-  function checkAnswer(answer){
+  function checkAnswer(answer) {
 
     let status;
     if (answer === testArray[questionNumber].variants[testArray[questionNumber].correctIndex]) {
-      console.log('true');
+      // console.log('true');
       status = true;
     } else {
-      console.log('false');
+      // console.log('false');
       status = false;
     }
-    const ans = {word: testArray[questionNumber].variants[testArray[questionNumber].correctIndex], status: status};
+    const ans = { word: testArray[questionNumber].variants[testArray[questionNumber].correctIndex], status: status };
     increaseQuestionNumber();
     setTestProgress(questionNumber + 2);
     addResult(ans)
@@ -67,7 +67,7 @@ export const Test = () => {
     }
   }
 
-  function resetTest(t){
+  function resetTest(t) {
     console.log('start creating test array');
     console.log(storeTests[URLprefix])
 
@@ -81,92 +81,92 @@ export const Test = () => {
     setStartTime();
     console.log('creating test array done');
   }
-  
+
   if (possibleURLs.find((el) => el === URLprefix) && testArray !== null) {
     if ((questionNumber + 1) <= testWordsNumber) {
 
-      const variants = testArray[questionNumber].variants.map((v) => 
-        <button 
+      const variants = testArray[questionNumber].variants.map((v) =>
+        <button
           key={v.toString()}
-          className='btn-m test-btn' 
-          onClick={(e)=> {checkAnswer(v)}}>
-            {words[v].translation.join(', ')}
+          className='btn-m test-btn'
+          onClick={(e) => { checkAnswer(v) }}>
+          {words[v].translation.join(', ')}
         </button>
       )
       return (
         <>
-        <Breadcrumbs/>
-        <div className='content test'>
-          <div className='test-status-bar'>
-            {/* <button className='btn-s'>назад</button> */}
-            <p>{questionNumber +1} / {testWordsNumber}</p>
-            <progress className='test-progress'max={testWordsNumber} value={testProgress}></progress>
+          <Breadcrumbs />
+          <div className='content test'>
+            <div className='test-status-bar'>
+              {/* <button className='btn-s'>назад</button> */}
+              <p>{questionNumber + 1} / {testWordsNumber}</p>
+              <progress className='test-progress' max={testWordsNumber} value={testProgress}></progress>
+            </div>
+            <h4>{testArray[questionNumber].variants[testArray[questionNumber].correctIndex]}</h4>
+            <div className='group test-variants'>
+              <p>Выберите верный перевод</p>
+              {variants}
+            </div>
           </div>
-          <h4>{testArray[questionNumber].variants[testArray[questionNumber].correctIndex]}</h4>
-          <div className='group test-variants'>
-            <p>Выберите верный перевод</p>
-            {variants}
-          </div>
-        </div>
         </>
       )
     } else {
-      let trueAnswersCount = result.filter((el) => {return el.status === true}).length;
-      const testTime = (endTime.getTime() - startTime.getTime())/1000
+      let trueAnswersCount = result.filter((el) => { return el.status === true }).length;
+      const testTime = (endTime.getTime() - startTime.getTime()) / 1000
       const minutes = Math.floor(testTime / 60);
       const seconds = Math.floor(testTime - minutes * 60);
       let formatedMinutes;
       let formatedSeconds;
-      minutes.toString().length < 2 
-        ? formatedMinutes = '0'+ minutes
+      minutes.toString().length < 2
+        ? formatedMinutes = '0' + minutes
         : formatedMinutes = minutes
-        seconds.toString().length < 2 
-        ? formatedSeconds = '0'+ seconds
+      seconds.toString().length < 2
+        ? formatedSeconds = '0' + seconds
         : formatedSeconds = seconds
       return (
         <>
-        <Breadcrumbs/>
-        <div className='content'>
-          <h5>Резульататы теста "{URLprefix}"</h5>
-          <div className='res-item'>
-            <div className='res-numbers-item'>
-              <div className='res-tip'>
-                <img src={done}/>
-                <p>результат</p>
+          <Breadcrumbs />
+          <div className='content'>
+            <h5>Резульататы теста "{URLprefix}"</h5>
+            <div className='res-item'>
+              <div className='res-numbers-item'>
+                <div className='res-tip'>
+                  <img src={done} />
+                  <p>результат</p>
+                </div>
+                <h3>{trueAnswersCount} / {result.length}</h3>
               </div>
-              <h3>{trueAnswersCount} / {result.length}</h3>
-            </div>
-            <div className='res-numbers-item'>
-              <div className='res-tip'>
-                <img src={clock}/>
-                <p>время</p>
+              <div className='res-numbers-item'>
+                <div className='res-tip'>
+                  <img src={clock} />
+                  <p>время</p>
+                </div>
+                <h3>{formatedMinutes}:{formatedSeconds} мин.</h3>
               </div>
-              <h3>{formatedMinutes}:{formatedSeconds} мин.</h3>
             </div>
-          </div>
-          {/* <div className='res-item accordion-item'>
+            {/* <div className='res-item accordion-item'>
             <div className='res-item-header'>
               <img src={stat}/>
               <h2>stat</h2>
             </div>
             <img className='accordion-arrow' src={arrow}/>
           </div> */}
-          <Accordion
-            title={'статистика'}
-            icon={'stat'}
-            content={<WordStat result={result}/>}
-          />
-          <div className='group'>
-            <button onClick={(e) => {resetTest(storeTests[URLprefix])}} className='btn-m'>пройти еще раз</button>
-            <Link to='/'><button className='btn-m accent w-full'>на главную страницу</button></Link>
+            <Accordion
+              title={'статистика'}
+              icon={'stat'}
+              content={<WordStat result={result} />}
+            />
+            <div className='group'>
+              <button onClick={(e) => { resetTest(storeTests[URLprefix]) }} className='btn-m'>пройти еще раз</button>
+              <Link to='/'><button className='btn-m accent w-full'>на главную страницу</button></Link>
+            </div>
           </div>
-        </div>
         </>
       )
     }
   } else {
     return (
-      <NotFound/>
+      <NotFound />
     )
   }
 }
