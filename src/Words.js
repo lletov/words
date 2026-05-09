@@ -1,9 +1,4 @@
 const words = {
-    'a': {
-        translation: ['один', 'неопределённый артикль'],
-        level: ['A1'],
-        partOfSpeech: ['article']
-    },
     'ability': {
         translation: ['способность'],
         level: ['A2'],
@@ -214,6 +209,7 @@ const words = {
         level: ['B2'],
         partOfSpeech: ['noun']
     },
+
     'and': {
         translation: ['и'],
         level: ['A1'],
@@ -502,7 +498,7 @@ const words = {
     'billion': {
         translation: ['миллиард'],
         level: ['B1'],
-        partOfSpeech: ['number', 'noun']
+        partOfSpeech: ['noun']
     },
     'bit': {
         translation: ['кусочек', 'немного'],
@@ -547,7 +543,7 @@ const words = {
     'both': {
         translation: ['оба'],
         level: ['A2'],
-        partOfSpeech: ['determiner', 'pronoun']
+        partOfSpeech: ['pronoun']
     },
     'box': {
         translation: ['коробка'],
