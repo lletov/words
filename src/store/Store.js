@@ -9,7 +9,7 @@ const useTestStore = create((set) => ({
       subtitle: "Случайные 5 слов",
       wordsCounter: 5,
       time: 1,
-      category: ['adverb']
+      partOfSpeech: ['adverb']
     },
     "a2": {
       url: "a2",
@@ -18,7 +18,7 @@ const useTestStore = create((set) => ({
       subtitle: "Случайные 5 слов уровня A2",
       wordsCounter: 5,
       time: 1,
-      category: ['adverb']
+      partOfSpeech: ['adverb']
     },
     "adverb": {
       url: "adverb",
@@ -27,7 +27,7 @@ const useTestStore = create((set) => ({
       subtitle: "5 случайных наречий",
       wordsCounter: 5,
       time: 1,
-      category: ['adverb']
+      partOfSpeech: ['adverb']
     },
     "50": {
       url: "50",
@@ -36,7 +36,7 @@ const useTestStore = create((set) => ({
       subtitle: "Случайные 50 слов",
       wordsCounter: 50,
       time: 3,
-      category: ['adverb']
+      partOfSpeech: ['adverb']
     },
     "100": {
       url: "100",
@@ -45,14 +45,14 @@ const useTestStore = create((set) => ({
       subtitle: "Случайные 100 слов",
       wordsCounter: 100,
       time: 4,
-      category: ['adverb']
+      partOfSpeech: ['adverb']
     }
   },
   testArray: null,
   questionNumber: 0,
   testWordsNumber: 0,
   startTime: null,
-  endTime: null, 
+  endTime: null,
   result: [],
   statisticOn: localStorage.getItem('statisticOn'),
 
@@ -65,8 +65,8 @@ const useTestStore = create((set) => ({
   resetQuestionNumber: () => set({ questionNumber: 0 }),
   increaseQuestionNumber: () => set((state) => ({ questionNumber: state.questionNumber + 1 })),
   setTestWordsNumber: (n) => set({ testWordsNumber: n }),
-  setStartTime: () => set({ startTime: new Date()}),
-  setEndTime: () => set({ endTime: new Date()}),
+  setStartTime: () => set({ startTime: new Date() }),
+  setEndTime: () => set({ endTime: new Date() }),
   addResult: (el) => set((state) => ({ result: [...state.result, el] })),
   resetResult: (el) => set((state) => ({ result: [] })),
   setStatisticOn: (n) => set({ statisticOn: n }),
