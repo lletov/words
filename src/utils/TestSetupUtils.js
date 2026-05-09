@@ -25,11 +25,10 @@ export function generateTestObject(arr) {
   let testArr = [];
   for (let i = 0; i < arr.length; i++) {
     let id = i;
-    const targetPartOfSpeech = words[arr[i]].category;
-    console.log(arr[i], targetPartOfSpeech)
+    const targetPartOfSpeech = words[arr[i]].partOfSpeech;
     const targetPartOfSpeechWordsArray =
       Object.entries(words).filter(([key, value]) =>
-        value.category.some(partOfSpeech => targetPartOfSpeech.includes(partOfSpeech))
+        value.partOfSpeech.some(partOfSpeech => targetPartOfSpeech.includes(partOfSpeech))
       ).map(([key, value]) => key);
     let refArr = targetPartOfSpeechWordsArray.filter((word) => word !== arr[i])
     let additionalArr = generareRandomList(refArr, 3)

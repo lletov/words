@@ -2,613 +2,613 @@ const words = {
     'a': {
         translation: ['один', 'неопределённый артикль'],
         level: ['A1'],
-        category: ['grammar']
+        partOfSpeech: ['article']
     },
     'ability': {
         translation: ['способность'],
         level: ['A2'],
-        category: ['abstract']
+        partOfSpeech: ['noun']
     },
     'able': {
         translation: ['способный'],
         level: ['A2'],
-        category: ['adjective']
+        partOfSpeech: ['adjective']
     },
     'about': {
         translation: ['о', 'об'],
         level: ['A1'],
-        category: ['preposition']
+        partOfSpeech: ['preposition', 'adverb']
     },
     'above': {
         translation: ['выше', 'над'],
         level: ['A2'],
-        category: ['preposition']
+        partOfSpeech: ['preposition', 'adverb']
     },
     'accept': {
         translation: ['принимать'],
         level: ['A2'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'according': {
         translation: ['согласно'],
         level: ['B1'],
-        category: ['adverb']
+        partOfSpeech: ['adverb']
     },
     'account': {
         translation: ['счёт', 'учёт'],
         level: ['B1'],
-        category: ['finance']
+        partOfSpeech: ['noun']
     },
     'across': {
         translation: ['через', 'по ту сторону'],
         level: ['A2'],
-        category: ['preposition']
+        partOfSpeech: ['preposition', 'adverb']
     },
-        'act': {
+    'act': {
         translation: ['действовать', 'акт'],
         level: ['A2'],
-        category: ['verb']
+        partOfSpeech: ['verb', 'noun']
     },
     'action': {
         translation: ['действие'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'activity': {
         translation: ['деятельность'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'actually': {
         translation: ['на самом деле'],
         level: ['B1'],
-        category: ['adverb']
+        partOfSpeech: ['adverb']
     },
     'add': {
         translation: ['добавлять'],
         level: ['A1'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'address': {
         translation: ['адрес'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'administration': {
         translation: ['администрация'],
         level: ['B2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'admit': {
         translation: ['признавать'],
         level: ['B1'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'adult': {
         translation: ['взрослый'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun', 'adjective']
     },
     'affect': {
         translation: ['влиять'],
         level: ['B1'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'after': {
         translation: ['после'],
         level: ['A1'],
-        category: ['preposition']
+        partOfSpeech: ['preposition', 'conjunction', 'adverb']
     },
     'again': {
         translation: ['снова'],
         level: ['A1'],
-        category: ['adverb']
+        partOfSpeech: ['adverb']
     },
     'against': {
         translation: ['против'],
         level: ['A2'],
-        category: ['preposition']
+        partOfSpeech: ['preposition']
     },
     'age': {
         translation: ['возраст'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'agency': {
         translation: ['агентство'],
         level: ['B1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'agent': {
         translation: ['агент'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'ago': {
         translation: ['назад'],
         level: ['A2'],
-        category: ['adverb']
+        partOfSpeech: ['adverb']
     },
     'agree': {
         translation: ['соглашаться'],
         level: ['A2'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'agreement': {
         translation: ['соглашение'],
         level: ['B1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'ahead': {
         translation: ['впереди'],
         level: ['B1'],
-        category: ['adverb']
+        partOfSpeech: ['adverb']
     },
     'air': {
         translation: ['воздух'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'all': {
         translation: ['все'],
         level: ['A1'],
-        category: ['pronoun']
+        partOfSpeech: ['determiner', 'pronoun', 'adverb']
     },
     'allow': {
         translation: ['разрешать'],
         level: ['A2'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'almost': {
         translation: ['почти'],
         level: ['A2'],
-        category: ['adverb']
+        partOfSpeech: ['adverb']
     },
     'alone': {
         translation: ['один', 'в одиночестве'],
         level: ['A2'],
-        category: ['adjective']
+        partOfSpeech: ['adjective', 'adverb']
     },
     'along': {
         translation: ['вдоль', 'по'],
         level: ['A2'],
-        category: ['preposition']
+        partOfSpeech: ['preposition', 'adverb']
     },
     'already': {
         translation: ['уже'],
         level: ['A1'],
-        category: ['adverb']
+        partOfSpeech: ['adverb']
     },
     'also': {
         translation: ['также'],
         level: ['A1'],
-        category: ['adverb']
+        partOfSpeech: ['adverb']
     },
     'although': {
         translation: ['хотя'],
         level: ['B1'],
-        category: ['conjunction']
+        partOfSpeech: ['conjunction']
     },
     'always': {
         translation: ['всегда'],
         level: ['A1'],
-        category: ['adverb']
+        partOfSpeech: ['adverb']
     },
     'american': {
         translation: ['американский'],
         level: ['A2'],
-        category: ['adjective']
+        partOfSpeech: ['adjective', 'noun']
     },
     'among': {
         translation: ['среди'],
         level: ['A2'],
-        category: ['preposition']
+        partOfSpeech: ['preposition']
     },
     'amount': {
         translation: ['количество'],
         level: ['B1'],
-        category: ['noun']
+        partOfSpeech: ['noun', 'verb']
     },
     'analysis': {
         translation: ['анализ'],
         level: ['B2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
-        'and': {
+    'and': {
         translation: ['и'],
         level: ['A1'],
-        category: ['conjunction']
+        partOfSpeech: ['conjunction']
     },
     'animal': {
         translation: ['животное'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'another': {
         translation: ['другой'],
         level: ['A2'],
-        category: ['pronoun']
+        partOfSpeech: ['determiner', 'pronoun']
     },
     'answer': {
         translation: ['ответ'],
         level: ['A1'],
-        category: ['noun', 'verb']
+        partOfSpeech: ['noun', 'verb']
     },
     'any': {
         translation: ['любой'],
         level: ['A2'],
-        category: ['determiner']
+        partOfSpeech: ['determiner', 'pronoun', 'adverb']
     },
     'anyone': {
         translation: ['кто угодно'],
         level: ['A2'],
-        category: ['pronoun']
+        partOfSpeech: ['pronoun']
     },
     'anything': {
         translation: ['что угодно'],
         level: ['A2'],
-        category: ['pronoun']
+        partOfSpeech: ['pronoun']
     },
     'appear': {
         translation: ['появляться'],
         level: ['B1'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'apply': {
         translation: ['применять', 'подать заявку'],
         level: ['B1'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'approach': {
         translation: ['подход', 'подходить'],
         level: ['B1'],
-        category: ['noun', 'verb']
+        partOfSpeech: ['noun', 'verb']
     },
     'area': {
         translation: ['область', 'район'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'argue': {
         translation: ['спорить'],
         level: ['B1'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'arm': {
         translation: ['рука', 'оружие'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun', 'verb']
     },
     'around': {
         translation: ['вокруг'],
         level: ['A2'],
-        category: ['preposition', 'adverb']
+        partOfSpeech: ['preposition', 'adverb']
     },
     'arrive': {
         translation: ['прибывать'],
         level: ['A2'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'art': {
         translation: ['искусство'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'article': {
         translation: ['статья', 'артикль'],
         level: ['B1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'artist': {
         translation: ['художник'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'as': {
         translation: ['как', 'в качестве'],
         level: ['A1'],
-        category: ['conjunction', 'preposition']
+        partOfSpeech: ['conjunction', 'preposition', 'adverb']
     },
     'ask': {
         translation: ['спрашивать'],
         level: ['A1'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'assume': {
         translation: ['предполагать'],
         level: ['B1'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'at': {
         translation: ['в', 'на'],
         level: ['A1'],
-        category: ['preposition']
+        partOfSpeech: ['preposition']
     },
     'attack': {
         translation: ['атака', 'атаковать'],
         level: ['B1'],
-        category: ['noun', 'verb']
+        partOfSpeech: ['noun', 'verb']
     },
     'attention': {
         translation: ['внимание'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'attorney': {
         translation: ['адвокат'],
         level: ['B2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'audience': {
         translation: ['аудитория'],
         level: ['B1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'author': {
         translation: ['автор'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'authority': {
         translation: ['власть', 'авторитет'],
         level: ['B2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'available': {
         translation: ['доступный'],
         level: ['B1'],
-        category: ['adjective']
+        partOfSpeech: ['adjective']
     },
     'avoid': {
         translation: ['избегать'],
         level: ['B1'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'away': {
         translation: ['далеко', 'вдали'],
         level: ['A2'],
-        category: ['adverb']
+        partOfSpeech: ['adverb']
     },
     'baby': {
         translation: ['младенец'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'back': {
         translation: ['назад', 'спина'],
         level: ['A1'],
-        category: ['adverb', 'noun']
+        partOfSpeech: ['adverb', 'noun', 'verb', 'adjective']
     },
     'bad': {
         translation: ['плохой'],
         level: ['A1'],
-        category: ['adjective']
+        partOfSpeech: ['adjective']
     },
     'bag': {
         translation: ['сумка'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'ball': {
         translation: ['мяч'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'bank': {
         translation: ['банк'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'bar': {
         translation: ['бар', 'перекладина'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'base': {
         translation: ['основа', 'база'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun', 'verb']
     },
     'be': {
         translation: ['быть'],
         level: ['A1'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'beat': {
         translation: ['бить', 'удар'],
         level: ['B1'],
-        category: ['verb', 'noun']
+        partOfSpeech: ['verb', 'noun']
     },
     'beautiful': {
         translation: ['красивый'],
         level: ['A2'],
-        category: ['adjective']
+        partOfSpeech: ['adjective']
     },
     'because': {
         translation: ['потому что'],
         level: ['A2'],
-        category: ['conjunction']
+        partOfSpeech: ['conjunction']
     },
     'become': {
         translation: ['становиться'],
         level: ['A2'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'bed': {
         translation: ['кровать'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'before': {
         translation: ['до', 'перед'],
         level: ['A1'],
-        category: ['preposition']
+        partOfSpeech: ['preposition', 'conjunction', 'adverb']
     },
     'begin': {
         translation: ['начинать'],
         level: ['A1'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'behavior': {
         translation: ['поведение'],
         level: ['B1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'behind': {
         translation: ['за', 'позади'],
         level: ['A2'],
-        category: ['preposition']
+        partOfSpeech: ['preposition', 'adverb']
     },
     'believe': {
         translation: ['верить'],
         level: ['A2'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'benefit': {
         translation: ['выгода', 'польза'],
         level: ['B1'],
-        category: ['noun', 'verb']
+        partOfSpeech: ['noun', 'verb']
     },
     'best': {
         translation: ['лучший'],
         level: ['A2'],
-        category: ['adjective']
+        partOfSpeech: ['adjective', 'adverb', 'noun']
     },
     'better': {
         translation: ['лучше'],
         level: ['A2'],
-        category: ['adverb']
+        partOfSpeech: ['adjective', 'adverb', 'noun', 'verb']
     },
     'between': {
         translation: ['между'],
         level: ['A2'],
-        category: ['preposition']
+        partOfSpeech: ['preposition']
     },
     'beyond': {
         translation: ['за', 'по ту сторону'],
         level: ['B1'],
-        category: ['preposition']
+        partOfSpeech: ['preposition', 'adverb']
     },
     'big': {
         translation: ['большой'],
         level: ['A1'],
-        category: ['adjective']
+        partOfSpeech: ['adjective']
     },
     'bill': {
         translation: ['счёт', 'билл'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun', 'verb']
     },
     'billion': {
         translation: ['миллиард'],
         level: ['B1'],
-        category: ['noun']
+        partOfSpeech: ['number', 'noun']
     },
     'bit': {
         translation: ['кусочек', 'немного'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'black': {
         translation: ['чёрный'],
         level: ['A1'],
-        category: ['adjective']
+        partOfSpeech: ['adjective', 'noun']
     },
     'blood': {
         translation: ['кровь'],
         level: ['B1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'blue': {
         translation: ['синий'],
         level: ['A1'],
-        category: ['adjective']
+        partOfSpeech: ['adjective', 'noun']
     },
     'board': {
         translation: ['доска', 'борд'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun', 'verb']
     },
     'body': {
         translation: ['тело'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'book': {
         translation: ['книга'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun', 'verb']
     },
     'born': {
         translation: ['рожденный'],
         level: ['B1'],
-        category: ['verb', 'adjective']
+        partOfSpeech: ['verb', 'adjective']
     },
     'both': {
         translation: ['оба'],
         level: ['A2'],
-        category: ['pronoun']
+        partOfSpeech: ['determiner', 'pronoun']
     },
     'box': {
         translation: ['коробка'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun', 'verb']
     },
     'boy': {
         translation: ['мальчик'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'break': {
         translation: ['ломать', 'перерыв'],
         level: ['A2'],
-        category: ['verb', 'noun']
+        partOfSpeech: ['verb', 'noun']
     },
     'bring': {
         translation: ['приносить'],
         level: ['A2'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'brother': {
         translation: ['брат'],
         level: ['A1'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'budget': {
         translation: ['бюджет'],
         level: ['B1'],
-        category: ['noun']
+        partOfSpeech: ['noun', 'verb']
     },
     'build': {
         translation: ['строить'],
         level: ['A2'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'building': {
         translation: ['здание'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'business': {
         translation: ['бизнес'],
         level: ['A2'],
-        category: ['noun']
+        partOfSpeech: ['noun']
     },
     'but': {
         translation: ['но'],
         level: ['A1'],
-        category: ['conjunction']
+        partOfSpeech: ['conjunction', 'preposition']
     },
     'buy': {
         translation: ['покупать'],
         level: ['A1'],
-        category: ['verb']
+        partOfSpeech: ['verb']
     },
     'by': {
         translation: ['у', 'по', 'к'],
         level: ['A1'],
-        category: ['preposition']
+        partOfSpeech: ['preposition', 'adverb']
     }
 };
 
-export default words
+export default words;
